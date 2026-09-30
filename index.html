@@ -168,6 +168,20 @@
     }
     .beforeafter > div{display:flex;align-items:flex-end;padding:12px;color:#fff;font-weight:900;font-size:12px}
     .before{background:linear-gradient(160deg,#b8afa8,#776d67)}
+
+    .beforeafter .before,
+    .beforeafter .after{
+      padding:0;
+      overflow:hidden;
+      min-height:260px;
+    }
+    .beforeafter img{
+      width:100%;
+      height:100%;
+      min-height:260px;
+      display:block;
+      object-fit:cover;
+    }
     .after{background:linear-gradient(160deg,#e8b6aa,#bd776b)}
     .result small{color:var(--muted)}
     .offer{background:linear-gradient(145deg,#fff1ed,#fff);border:1px solid #f5d8d1}
@@ -386,10 +400,10 @@
         <div class="carousel-stage">
           <button class="slider-side slider-side-left" data-target="reviews" data-dir="-1" aria-label="Ver avaliação anterior">‹</button>
           <div class="carousel" id="reviews" tabindex="0">
-          <article class="review"><div class="stars">★★★★★</div><p>“[Depoimento real da cliente sobre a experiência com o produto.]”</p><div class="person"><div class="avatar">A</div><div><strong>Nome da cliente</strong><small>Cliente • substituir por prova real</small></div></div></article>
-          <article class="review"><div class="stars">★★★★★</div><p>“[Depoimento real destacando praticidade, organização ou facilidade para treinar em casa.]”</p><div class="person"><div class="avatar">M</div><div><strong>Nome da cliente</strong><small>Cliente • substituir por prova real</small></div></div></article>
-          <article class="review"><div class="stars">★★★★★</div><p>“[Depoimento real sobre a rotina de 6 dias e os materiais de apoio.]”</p><div class="person"><div class="avatar">J</div><div><strong>Nome da cliente</strong><small>Cliente • substituir por prova real</small></div></div></article>
-          <article class="review"><div class="stars">★★★★★</div><p>“[Depoimento real de uma cliente que preferiu treinar em casa.]”</p><div class="person"><div class="avatar">C</div><div><strong>Nome da cliente</strong><small>Cliente • substituir por prova real</small></div></div></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“[Depoimento real da cliente sobre a experiência com o produto.]”</p><div class="person"><div class="avatar"><img src="cliente1.jpg" alt="Foto da cliente 1"></div><div><strong>Nome da cliente</strong><small>Cliente • substituir por prova real</small></div></div></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“[Depoimento real destacando praticidade, organização ou facilidade para treinar em casa.]”</p><div class="person"><div class="avatar"><img src="cliente2.jpg" alt="Foto da cliente 2"></div><div><strong>Nome da cliente</strong><small>Cliente • substituir por prova real</small></div></div></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“[Depoimento real sobre a rotina de 6 dias e os materiais de apoio.]”</p><div class="person"><div class="avatar"><img src="cliente3.jpg" alt="Foto da cliente 3"></div><div><strong>Nome da cliente</strong><small>Cliente • substituir por prova real</small></div></div></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“[Depoimento real de uma cliente que preferiu treinar em casa.]”</p><div class="person"><div class="avatar"><img src="cliente4.jpg" alt="Foto da cliente 4"></div><div><strong>Nome da cliente</strong><small>Cliente • substituir por prova real</small></div></div></article>
           </div>
           <button class="slider-side slider-side-right" data-target="reviews" data-dir="1" aria-label="Ver próxima avaliação">›</button>
         </div>
@@ -408,15 +422,15 @@
           <button class="slider-side slider-side-left" data-target="results" data-dir="-1" aria-label="Ver resultado anterior">‹</button>
           <div class="carousel" id="results" tabindex="0">
           <article class="result">
-            <div class="beforeafter"><div class="before">ANTES</div><div class="after">DEPOIS</div></div>
+            <div class="beforeafter"><div class="before"><img src="antes1.jpg" alt="Antes - cliente 1"></div><div class="after"><img src="depois1.jpg" alt="Depois - cliente 1"></div></div>
             <strong>Nome da cliente</strong><br><small>Substitua este bloco pelas fotos autorizadas e pelo relato real.</small>
           </article>
           <article class="result">
-            <div class="beforeafter"><div class="before">ANTES</div><div class="after">DEPOIS</div></div>
+            <div class="beforeafter"><div class="before"><img src="antes2.jpg" alt="Antes - cliente 2"></div><div class="after"><img src="depois2.jpg" alt="Depois - cliente 2"></div></div>
             <strong>Nome da cliente</strong><br><small>Substitua este bloco pelas fotos autorizadas e pelo relato real.</small>
           </article>
           <article class="result">
-            <div class="beforeafter"><div class="before">ANTES</div><div class="after">DEPOIS</div></div>
+            <div class="beforeafter"><div class="before"><img src="antes3.jpg" alt="Antes - cliente 3"></div><div class="after"><img src="depois3.jpg" alt="Depois - cliente 3"></div></div>
             <strong>Nome da cliente</strong><br><small>Substitua este bloco pelas fotos autorizadas e pelo relato real.</small>
           </article>
           </div>
