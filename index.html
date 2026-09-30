@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Verão em Casa | Treinos em Casa</title>
+  <meta name="description" content="Projeto Verão em Casa: 6 dias de treinos para fazer em casa, com vídeos, ilustrações e material de apoio por apenas R$19,90." />
+  <style>
+    :root{
+      --bg:#fffdfb;
+      --surface:#ffffff;
+      --text:#181817;
+      --muted:#6e6b68;
+      --line:#ece8e4;
+      --primary:#ef6f61;
+      --primary-dark:#d95649;
+      --soft:#fff0ed;
+      --green:#237a58;
+      --shadow:0 18px 55px rgba(35,25,20,.09);
+      --radius:24px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);background:var(--bg);line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .topbar{
+      background:#181817;color:#fff;text-align:center;padding:12px 16px;font-size:13px;font-weight:900;
+      letter-spacing:.02em
+    }
+    nav{
+      position:sticky;top:0;z-index:50;background:rgba(255,253,251,.88);
+      backdrop-filter:blur(14px);border-bottom:1px solid rgba(236,232,228,.8)
+    }
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:900;letter-spacing:-.04em;font-size:19px}
+    .brand span{color:var(--primary)}
+    .nav-links{display:flex;gap:26px;color:#595653;font-size:14px;font-weight:650}
+    .nav-cta,.btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      border:0;border-radius:999px;padding:13px 21px;font-weight:800;cursor:pointer;
+      transition:.2s ease;font-size:14px
+    }
+    .nav-cta,.btn-primary{background:var(--primary);color:#fff;box-shadow:0 10px 25px rgba(239,111,97,.24)}
+    .nav-cta:hover,.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
+    .btn-dark{background:#181817;color:#fff}
+    .btn-dark:hover{transform:translateY(-1px);opacity:.93}
+    .hero{padding:78px 0 70px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:65px}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;background:var(--soft);color:var(--primary-dark);
+      border:1px solid #ffd9d3;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:850;margin-bottom:20px
+    }
+    h1{font-size:clamp(42px,6vw,70px);line-height:.99;letter-spacing:-.055em;max-width:680px}
+    h1 em{font-style:normal;color:var(--primary)}
+    .hero p{font-size:18px;color:var(--muted);max-width:580px;margin:23px 0 28px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:23px;color:#77736f;font-size:12px;font-weight:650}
+    .trust span{display:flex;align-items:center;gap:6px}
+
+    .hero-content{text-align:center}
+    .hero-content h1,.hero-content p{margin-left:auto;margin-right:auto}
+    .hero-content .hero-actions{justify-content:center}
+    .hero-content .trust{justify-content:center}
+    .hero-video{
+      width:min(760px,100%);margin:26px auto 24px;border-radius:22px;overflow:hidden;
+      background:#171615;box-shadow:0 18px 55px rgba(35,25,20,.14);
+      border:1px solid #eee5e0;aspect-ratio:16/9;position:relative
+    }
+    .hero-video video{width:100%;height:100%;display:block;object-fit:cover}
+    .visual{
+      position:relative;min-height:510px;border-radius:36px;background:
+      radial-gradient(circle at 70% 20%,#ffd7cf 0 15%,transparent 16%),
+      linear-gradient(145deg,#fff1ed,#f8eee8 58%,#f0e7e0);
+      box-shadow:var(--shadow);overflow:hidden;border:1px solid #f1e7e2;
+    }
+    .visual:before{
+      content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:#fff;
+      top:80px;right:45px;opacity:.65
+    }
+    .mock-card{
+      position:absolute;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.9);
+      box-shadow:0 18px 45px rgba(53,37,31,.13);border-radius:20px;padding:20px
+    }
+    .mock-main{width:72%;left:11%;top:12%;z-index:2}
+    .mock-main .fake-video{height:230px;border-radius:15px;background:linear-gradient(135deg,#222,#6d514c);display:flex;align-items:center;justify-content:center;color:#fff;font-size:48px}
+    .mock-main h3{font-size:17px;margin-top:15px}
+    .mock-main small{color:var(--muted)}
+    .mock-mini{right:7%;bottom:11%;width:48%;z-index:3}
+    .mock-mini .row{display:flex;gap:10px;align-items:center}
+    .circle{width:40px;height:40px;border-radius:50%;background:var(--soft);display:grid;place-items:center}
+    .mock-mini strong{font-size:13px}.mock-mini small{font-size:11px;color:var(--muted)}
+    section{padding:85px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 44px}
+    .kicker{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:var(--primary-dark);font-weight:900;margin-bottom:10px}
+    h2{font-size:clamp(31px,4vw,48px);line-height:1.05;letter-spacing:-.045em}
+    .section-head p{color:var(--muted);margin-top:15px;font-size:16px}
+    .days{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .day{
+      background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;
+      transition:.2s ease;min-height:205px
+    }
+    .day:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+    .day-num{font-size:12px;font-weight:900;color:var(--primary);margin-bottom:20px}
+    .day h3{font-size:19px;letter-spacing:-.02em;margin-bottom:8px}
+    .day p{font-size:14px;color:var(--muted)}
+    .checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+    .check{
+      background:#fff;border:1px solid var(--line);padding:17px 18px;border-radius:16px;
+      display:flex;gap:11px;font-size:14px;color:#45423f
+    }
+    .check b{color:var(--green);font-size:18px;line-height:1}
+    .band{background:#181817;color:#fff}
+    .band .section-head p{color:#bdb9b5}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .feature{padding:28px;border:1px solid #33302e;border-radius:22px;background:#201f1e}
+    .feature-icon{font-size:25px;margin-bottom:18px}
+    .feature h3{font-size:18px;margin-bottom:7px}.feature p{font-size:14px;color:#bcb8b4}
+    .carousel-wrap{position:relative}
+    .carousel-stage{
+      position:relative;display:grid;grid-template-columns:48px minmax(0,1fr) 48px;
+      align-items:center;gap:12px;
+    }
+    .carousel{
+      min-width:0;display:flex;gap:16px;overflow-x:auto;
+      scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;
+      padding:8px 4px 22px;overscroll-behavior-x:contain;
+      -webkit-overflow-scrolling:touch;touch-action:pan-x;
+      cursor:grab;user-select:none;
+    }
+    .carousel:active{cursor:grabbing}
+    .carousel::-webkit-scrollbar{display:none}
+    .slider-side{
+      width:48px;height:48px;border-radius:50%;border:1px solid #e5dfda;
+      background:#fff;color:#181817;display:grid;place-items:center;
+      font-size:38px;line-height:1;cursor:pointer;
+      box-shadow:0 8px 22px rgba(35,25,20,.12);
+      transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+      z-index:3;
+    }
+    .slider-side:hover{
+      transform:scale(1.06);box-shadow:0 11px 27px rgba(35,25,20,.17);
+      background:var(--soft);color:var(--primary-dark);
+    }
+    .slider-side:active{transform:scale(.96)}
+    .slider-side:focus-visible{
+      outline:3px solid rgba(239,111,97,.28);outline-offset:3px;
+    }
+    .carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:5px 2px 20px}
+    .carousel::-webkit-scrollbar{display:none}
+    .review,.result{
+      min-width:330px;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px
+    }
+    .stars{color:#efb34e;letter-spacing:2px;font-size:14px;margin-bottom:15px}
+    .review p{font-size:15px;color:#45423f;min-height:105px}
+    .person{display:flex;align-items:center;gap:11px;margin-top:18px}
+    .avatar{width:40px;height:40px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-weight:900;color:var(--primary)}
+    .person strong{font-size:13px;display:block}.person small{font-size:11px;color:var(--muted)}
+    .beforeafter{
+      height:270px;border-radius:17px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;
+      background:#eee;position:relative;margin-bottom:16px
+    }
+    .beforeafter > div{display:flex;align-items:flex-end;padding:12px;color:#fff;font-weight:900;font-size:12px}
+    .before{background:linear-gradient(160deg,#b8afa8,#776d67)}
+    .after{background:linear-gradient(160deg,#e8b6aa,#bd776b)}
+    .result small{color:var(--muted)}
+    .offer{background:linear-gradient(145deg,#fff1ed,#fff);border:1px solid #f5d8d1}
+    .receive-head .kicker{
+      display:inline-flex;align-items:center;justify-content:center;
+      background:var(--soft);border:1px solid #ffd9d3;border-radius:999px;
+      padding:9px 16px;color:var(--primary-dark);font-size:13px;
+      font-weight:950;letter-spacing:.12em;
+    }
+    .offer{
+      background:
+        radial-gradient(circle at 10% 10%,rgba(239,111,97,.13),transparent 30%),
+        radial-gradient(circle at 90% 85%,rgba(239,111,97,.10),transparent 28%),
+        linear-gradient(145deg,#fff1ed,#fff 62%);
+      border:1px solid #f5d8d1;
+    }
+    .offer-box{
+      position:relative;overflow:hidden;
+    }
+    .offer-box:before{
+      content:"OFERTA ESPECIAL";
+      position:absolute;top:0;left:50%;transform:translateX(-50%);
+      background:var(--primary);color:#fff;padding:9px 24px;
+      border-radius:0 0 14px 14px;font-size:11px;font-weight:950;
+      letter-spacing:.12em;box-shadow:0 8px 20px rgba(239,111,97,.22);
+    }
+    .offer-kicker{
+      margin-top:22px;margin-bottom:10px;
+      font-size:12px;font-weight:900;text-transform:uppercase;
+      letter-spacing:.12em;color:var(--primary-dark);
+    }
+    .price-wrap{
+      display:flex;align-items:center;justify-content:center;gap:13px;
+      flex-wrap:wrap;margin:4px 0 8px;
+    }
+    .price-old{
+      text-decoration:line-through;color:#a09b96;font-size:16px;font-weight:750;
+    }
+    .price-arrow{font-size:18px;color:#aaa39e;font-weight:900}
+    .price{
+      font-size:62px;line-height:1;font-weight:950;letter-spacing:-.06em;
+      margin:0;color:var(--primary-dark);
+    }
+    .discount-badge{
+      display:inline-flex;align-items:center;justify-content:center;
+      margin:8px auto 16px;background:#181817;color:#fff;
+      padding:7px 12px;border-radius:999px;font-size:11px;
+      font-weight:950;letter-spacing:.05em;
+    }
+    .offer-value{
+      font-size:15px;color:#4d4946;max-width:520px;margin:0 auto 4px;
+    }
+    .offer-list{
+      border-top:1px solid #eee2dd;border-bottom:1px solid #eee2dd;
+      padding:22px 0;margin:24px 0;
+    }
+    .offer-list div{font-weight:650}
+    .offer .btn-primary{
+      font-size:16px;font-weight:950;min-height:58px;
+      box-shadow:0 14px 30px rgba(239,111,97,.30);
+    }
+    .offer .btn-primary:hover{
+      box-shadow:0 17px 35px rgba(239,111,97,.36);
+    }
+    .offer-box{
+      max-width:760px;margin:auto;background:#fff;border:1px solid #eddeda;border-radius:30px;padding:42px;
+      box-shadow:var(--shadow);text-align:center
+    }
+    .price-old{text-decoration:line-through;color:#a09b96;font-size:15px}
+    .price{font-size:58px;line-height:1;font-weight:950;letter-spacing:-.06em;margin:7px 0}
+    .price small{font-size:17px;letter-spacing:0;color:#77736f;font-weight:700}
+    .offer-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:left;margin:26px 0}
+    .offer-list div{font-size:13px;color:#4d4946}
+    .guarantee{margin-top:18px;font-size:12px;color:var(--muted)}
+    .faq{max-width:800px;margin:auto}
+    details{border-bottom:1px solid var(--line);padding:20px 0}
+    summary{cursor:pointer;list-style:none;font-weight:800;font-size:16px;display:flex;justify-content:space-between;gap:20px}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";color:var(--primary);font-size:21px}
+    details[open] summary:after{content:"−"}
+    details p{color:var(--muted);font-size:14px;max-width:700px;padding-top:13px}
+    .final{padding:95px 0;text-align:center;background:#fff4f1}
+    .final p{color:var(--muted);max-width:600px;margin:15px auto 25px}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:#88827d;font-size:12px;text-align:center}
+    .disclaimer{max-width:760px;margin:16px auto 0;font-size:11px;color:#99938e}
+    @media(max-width:850px){
+      .nav-links{display:none}.hero-grid{grid-template-columns:1fr;gap:40px}
+      .visual{min-height:430px}.days,.feature-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:560px){
+      .container{width:min(calc(100% - 28px),var(--max))}
+      .hero{padding:55px 0}.hero p{font-size:16px}
+      .visual{min-height:360px}.mock-main{width:80%;left:7%;top:10%}.mock-main .fake-video{height:165px}
+      .mock-mini{width:60%;right:4%;bottom:7%}
+      section{padding:65px 0}.days,.feature-grid,.checklist,.offer-list{grid-template-columns:1fr}
+      .review,.result{min-width:84vw}.offer-box{padding:30px 20px}.price{font-size:50px}
+      .carousel-stage{grid-template-columns:34px minmax(0,1fr) 34px;gap:5px}
+      .slider-side{width:34px;height:34px;font-size:28px}
+      .nav-cta{padding:10px 14px;font-size:12px}.price-wrap{gap:7px}.price{font-size:50px}.price-arrow{display:none}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">OFERTA VÁLIDA SOMENTE ATÉ HOJE</div>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="#">Projeto <span>Verão</span> em Casa</a>
+      <div class="nav-links">
+        <a href="#receba">O que você recebe</a>
+        <a href="#depoimentos">Avaliações</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#faq">Dúvidas</a>
+      </div>
+      <a class="nav-cta" href="#oferta">Quero começar</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">✨ Seu treino, no seu espaço</div>
+
+          <h1>Seu projeto de treino pode começar <em>em casa.</em></h1>
+
+          <!--
+            VÍDEO LOCAL:
+            1. Crie uma pasta chamada "videos" na raiz do projeto.
+            2. Coloque seu vídeo dentro dela com o nome "video-projeto-verao.mp4".
+            3. Para trocar a thumbnail, coloque uma imagem em "videos/thumb.jpg".
+            4. Altere poster="videos/thumb.jpg" se usar outro nome.
+          -->
+          <div class="hero-video">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              poster="videos/thumb.jpg"
+            >
+              <source src="videos/video-projeto-verao.mp4" type="video/mp4">
+              Seu navegador não suporta a reprodução de vídeos.
+            </video>
+          </div>
+
+          <p>
+            Um programa de 6 dias com videoaulas, exercícios ilustrados e materiais de apoio
+            para você se movimentar sem precisar pagar academia.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#oferta">Quero o Projeto Verão em Casa →</a>
+          </div>
+
+          <div class="trust">
+            <span>✓ Acesso digital</span>
+            <span>✓ 6 dias de treino</span>
+            <span>✓ Treine no seu ritmo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="receba">
+      <div class="container">
+        <div class="section-head receive-head">
+          <div class="kicker">O QUE VOCÊ VAI RECEBER?</div>
+          <h2>Um plano completo para treinar em casa, sem complicação.</h2>
+          <p>Todo o conteúdo fica organizado em 6 pastas no Google Drive, uma para cada dia.</p>
+        </div>
+
+        <div class="days">
+          <article class="day"><div class="day-num">DIA 01</div><h3>Rotina de exercícios básicos</h3><p>Uma videoaula para começar trabalhando movimentos fundamentais e criar sua rotina.</p></article>
+          <article class="day"><div class="day-num">DIA 02</div><h3>Exercícios aeróbicos</h3><p>Uma sessão dinâmica para colocar o corpo em movimento dentro de casa.</p></article>
+          <article class="day"><div class="day-num">DIA 03</div><h3>Queima de 500 calorias</h3><p>Treino focado em movimentação e gasto energético, respeitando seu próprio ritmo.</p></article>
+          <article class="day"><div class="day-num">DIA 04</div><h3>Barriga + bumbum</h3><p>Sequência com foco em abdômen e glúteos, com orientação em vídeo.</p></article>
+          <article class="day"><div class="day-num">DIA 05</div><h3>Tonificar o corpo</h3><p>Uma rotina para trabalhar diferentes regiões do corpo em uma única sessão.</p></article>
+          <article class="day"><div class="day-num">DIA 06</div><h3>Queima de 1000 calorias</h3><p>Uma sessão mais longa e intensa. Faça adaptações conforme seu condicionamento.</p></article>
+        </div>
+
+        <div class="checklist">
+          <div class="check"><b>✓</b><span>Vídeos com duração aproximada de 10 a 59 minutos.</span></div>
+          <div class="check"><b>✓</b><span>Ilustrações dos exercícios para acompanhar os movimentos.</span></div>
+          <div class="check"><b>✓</b><span>Nome dos exercícios apresentados em cada treino.</span></div>
+          <div class="check"><b>✓</b><span>Textos, dicas e materiais de apoio para consulta.</span></div>
+          <div class="check"><b>✓</b><span>Material que pode ser impresso para consultar durante o treino.</span></div>
+          <div class="check"><b>✓</b><span>Organização em 6 pastas, uma para cada dia.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Por que em casa?</div>
+          <h2>Menos barreiras para começar.</h2>
+          <p>Você não precisa encaixar uma academia na sua rotina para dar o primeiro passo.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature"><div class="feature-icon">🏠</div><h3>Seu espaço</h3><p>Treine no conforto da sua casa, sem deslocamento e sem mensalidade de academia.</p></article>
+          <article class="feature"><div class="feature-icon">🕐</div><h3>Seu horário</h3><p>Escolha um momento que funcione para a sua rotina e acompanhe as aulas pelo celular ou computador.</p></article>
+          <article class="feature"><div class="feature-icon">📂</div><h3>Tudo organizado</h3><p>Os seis dias ficam separados em pastas para você saber exatamente qual conteúdo acessar.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Experiências</div>
+          <h2>Veja como a seção de avaliações pode ficar.</h2>
+          <p>Substitua os exemplos abaixo por depoimentos reais das suas clientes antes de publicar.</p>
+        </div>
+
+        <div class="carousel-stage">
+          <button class="slider-side slider-side-left" data-target="reviews" data-dir="-1" aria-label="Ver avaliação anterior">‹</button>
+          <div class="carousel" id="reviews" tabindex="0">
+          <article class="review"><div class="stars">★★★★★</div><p>“[Depoimento real da cliente sobre a experiência com o produto.]”</p><div class="person"><div class="avatar">A</div><div><strong>Nome da cliente</strong><small>Cliente • substituir por prova real</small></div></div></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“[Depoimento real destacando praticidade, organização ou facilidade para treinar em casa.]”</p><div class="person"><div class="avatar">M</div><div><strong>Nome da cliente</strong><small>Cliente • substituir por prova real</small></div></div></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“[Depoimento real sobre a rotina de 6 dias e os materiais de apoio.]”</p><div class="person"><div class="avatar">J</div><div><strong>Nome da cliente</strong><small>Cliente • substituir por prova real</small></div></div></article>
+          <article class="review"><div class="stars">★★★★★</div><p>“[Depoimento real de uma cliente que preferiu treinar em casa.]”</p><div class="person"><div class="avatar">C</div><div><strong>Nome da cliente</strong><small>Cliente • substituir por prova real</small></div></div></article>
+          </div>
+          <button class="slider-side slider-side-right" data-target="reviews" data-dir="1" aria-label="Ver próxima avaliação">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:20px">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Antes e depois</div>
+          <h2>Resultados reais merecem espaço de destaque.</h2>
+          <p>Use apenas fotos e relatos com autorização das clientes. Os cards abaixo são placeholders.</p>
+        </div>
+
+        <div class="carousel-stage">
+          <button class="slider-side slider-side-left" data-target="results" data-dir="-1" aria-label="Ver resultado anterior">‹</button>
+          <div class="carousel" id="results" tabindex="0">
+          <article class="result">
+            <div class="beforeafter"><div class="before">ANTES</div><div class="after">DEPOIS</div></div>
+            <strong>Nome da cliente</strong><br><small>Substitua este bloco pelas fotos autorizadas e pelo relato real.</small>
+          </article>
+          <article class="result">
+            <div class="beforeafter"><div class="before">ANTES</div><div class="after">DEPOIS</div></div>
+            <strong>Nome da cliente</strong><br><small>Substitua este bloco pelas fotos autorizadas e pelo relato real.</small>
+          </article>
+          <article class="result">
+            <div class="beforeafter"><div class="before">ANTES</div><div class="after">DEPOIS</div></div>
+            <strong>Nome da cliente</strong><br><small>Substitua este bloco pelas fotos autorizadas e pelo relato real.</small>
+          </article>
+          </div>
+          <button class="slider-side slider-side-right" data-target="results" data-dir="1" aria-label="Ver próximo resultado">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer" id="oferta">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Oferta especial</div>
+          <h2>Comece o Projeto Verão em Casa.</h2>
+          <p>Um programa digital simples para você acessar de onde estiver.</p>
+        </div>
+        <div class="offer-box">
+          <div class="offer-kicker">Aproveite enquanto a oferta está disponível</div>
+          <div class="price-wrap">
+            <span class="price-old">DE R$ 39,90</span>
+            <span class="price-arrow">→</span>
+            <div class="price">R$ 19,90 <small>pagamento único*</small></div>
+          </div>
+          <div class="discount-badge">50% DE DESCONTO • PAGAMENTO ÚNICO</div>
+          <p class="offer-value">Você recebe o acesso ao conteúdo digital descrito nesta página, sem mensalidade.</p>
+          <div class="offer-list">
+            <div>✓ 6 dias de treino</div>
+            <div>✓ 6 pastas no Google Drive</div>
+            <div>✓ Videoaulas</div>
+            <div>✓ Exercícios ilustrados</div>
+            <div>✓ Material para consulta</div>
+            <div>✓ Acesso digital</div>
+          </div>
+          <!-- TROQUE O HREF ABAIXO PELO SEU LINK DE CHECKOUT -->
+          <a class="btn btn-primary" style="width:100%;padding:17px" href="SEU-LINK-DE-CHECKOUT-AQUI">🔥 QUERO APROVEITAR A OFERTA →</a>
+          <div class="guarantee">🔒 Pagamento processado de forma segura • *Condições conforme seu checkout.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">FAQ</div>
+          <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Como recebo o Projeto Verão em Casa?</summary><p>Após a confirmação do pagamento, o acesso deve ser entregue pelo seu sistema de checkout, conforme a configuração da sua oferta.</p></details>
+          <details><summary>Preciso ir à academia?</summary><p>Não. A proposta do produto é oferecer treinos para serem realizados em casa, seguindo as orientações disponíveis nas videoaulas e materiais.</p></details>
+          <details><summary>Quanto tempo duram os vídeos?</summary><p>Os vídeos dos seis dias têm durações diferentes, aproximadamente entre 10 e 59 minutos.</p></details>
+          <details><summary>O que existe dentro de cada pasta?</summary><p>Cada uma das seis pastas reúne os vídeos do respectivo dia e materiais de apoio com ilustrações, nomes dos exercícios, textos e dicas.</p></details>
+          <details><summary>Posso imprimir os exercícios?</summary><p>Sim. O material ilustrativo foi pensado também para ser consultado e, se você quiser, impresso.</p></details>
+          <details><summary>Sou iniciante. Posso fazer?</summary><p>O nível de condicionamento varia de pessoa para pessoa. Comece respeitando seus limites, adapte os movimentos quando necessário e interrompa o exercício se sentir dor ou mal-estar. Se tiver alguma condição de saúde ou dúvida sobre sua capacidade de se exercitar, procure orientação profissional.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="container">
+        <div class="kicker">Seu próximo passo</div>
+        <h2>Seu espaço também pode ser o seu lugar de treino.</h2>
+        <p>Tenha os 6 dias organizados em um único produto e comece a criar uma rotina de movimento em casa.</p>
+        <a class="btn btn-primary" href="#oferta">Quero o Projeto Verão em Casa →</a>
+        <div class="disclaimer">Este produto é educacional e não substitui avaliação ou acompanhamento de profissionais de saúde e educação física. Resultados individuais podem variar.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Projeto Verão em Casa • Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script>
+    // Navegação dos carrosséis: setas laterais + arrastar no mouse/toque + teclado.
+    document.querySelectorAll('.slider-side').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const target=document.getElementById(btn.dataset.target);
+        target.scrollBy({left:Number(btn.dataset.dir)*360,behavior:'smooth'});
+      });
+    });
+
+    document.querySelectorAll('.carousel').forEach(carousel=>{
+      let pointerDown=false, startX=0, startScroll=0, moved=false;
+
+      carousel.addEventListener('pointerdown', e=>{
+        pointerDown=true;
+        moved=false;
+        startX=e.clientX;
+        startScroll=carousel.scrollLeft;
+        carousel.setPointerCapture?.(e.pointerId);
+      });
+
+      carousel.addEventListener('pointermove', e=>{
+        if(!pointerDown) return;
+        const dx=e.clientX-startX;
+        if(Math.abs(dx)>5) moved=true;
+        carousel.scrollLeft=startScroll-dx;
+      });
+
+      const stopDrag=e=>{
+        if(!pointerDown) return;
+        pointerDown=false;
+        if(e?.pointerId!=null) carousel.releasePointerCapture?.(e.pointerId);
+      };
+
+      carousel.addEventListener('pointerup', stopDrag);
+      carousel.addEventListener('pointercancel', stopDrag);
+      carousel.addEventListener('mouseleave', stopDrag);
+
+      // Evita clicar em links/elementos acidentalmente depois de arrastar.
+      carousel.addEventListener('click', e=>{
+        if(moved){
+          e.preventDefault();
+          e.stopPropagation();
+          moved=false;
+        }
+      }, true);
+
+      carousel.addEventListener('keydown', e=>{
+        if(e.key==='ArrowLeft'){
+          e.preventDefault();
+          carousel.scrollBy({left:-360,behavior:'smooth'});
+        }
+        if(e.key==='ArrowRight'){
+          e.preventDefault();
+          carousel.scrollBy({left:360,behavior:'smooth'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
