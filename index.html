@@ -369,6 +369,132 @@ body.quiz-open{overflow:hidden}
   .quiz-image-grid{gap:9px}.quiz-image-label{font-size:11px;min-height:49px;padding:7px}
 }
 
+
+/* ===== AJUSTE FINAL: OFERTA RESPONSIVA + QUIZ COM ROLAGEM ===== */
+.offer-box{
+  box-sizing:border-box;
+  width:min(760px,100%);
+  max-width:100%;
+  margin:0 auto;
+  text-align:center;
+  overflow:hidden;
+}
+.offer-kicker-row{
+  width:100%;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:nowrap;
+  gap:10px;
+  margin:22px auto 18px;
+  text-align:center;
+}
+.offer-kicker{
+  flex:1 1 auto;
+  min-width:0;
+  font-size:12px;
+  line-height:1.25;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--primary-dark);
+}
+.offer-timer{
+  flex:0 0 auto;
+  font-size:12px;
+  line-height:1.25;
+  font-weight:900;
+  letter-spacing:.06em;
+  color:var(--primary-dark);
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+.price-wrap{
+  width:100%;
+  box-sizing:border-box;
+  display:flex;
+  align-items:baseline;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px 12px;
+  margin:4px auto 12px;
+  text-align:center;
+}
+.price{
+  max-width:100%;
+  font-size:clamp(42px,7vw,62px);
+  line-height:1.05;
+  font-weight:950;
+  letter-spacing:-.045em;
+  margin:0;
+  color:var(--primary-dark);
+  white-space:nowrap;
+}
+.price small{
+  display:inline-block;
+  white-space:nowrap;
+  font-size:clamp(12px,2vw,14px);
+  line-height:1;
+  font-weight:850;
+  letter-spacing:0;
+  color:#6b625e;
+}
+.price-old,.price-arrow{flex:0 0 auto}
+.discount-badge{
+  width:fit-content;
+  max-width:100%;
+  box-sizing:border-box;
+  margin:10px auto 18px;
+  padding:10px 16px;
+  line-height:1.3;
+  text-align:center;
+  white-space:normal;
+}
+.offer-value{max-width:520px;width:100%;box-sizing:border-box;margin:0 auto 4px;line-height:1.5}
+.offer-list{width:100%;box-sizing:border-box}
+.offer .btn-primary{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%!important;max-width:100%;white-space:normal;text-align:center;line-height:1.25}
+.guarantee{max-width:100%;line-height:1.5}
+
+/* O quiz começa no topo e o próprio quiz pode ser rolado até o fim. */
+#quizOverlay{
+  position:fixed;
+  inset:0;
+  overflow-x:hidden;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.quiz-wrap{
+  width:min(720px,calc(100% - 32px));
+  min-height:0;
+  margin:0 auto;
+  padding:24px 0 60px;
+  display:block;
+}
+.quiz-screen{width:100%;box-sizing:border-box}
+body.quiz-open{overflow:hidden}
+
+@media(max-width:560px){
+  .offer-box{padding:32px 18px!important;border-radius:24px}
+  .offer-kicker-row{gap:7px;margin-top:20px}
+  .offer-kicker,.offer-timer{font-size:10px;letter-spacing:.045em}
+  .price-wrap{gap:5px 8px}
+  .price-old{font-size:13px}
+  .price-arrow{display:none}
+  .price{font-size:46px;letter-spacing:-.04em}
+  .price small{font-size:12px}
+  .discount-badge{font-size:10px;padding:9px 12px}
+  .offer-list{grid-template-columns:1fr!important;text-align:left}
+  .offer .btn-primary{font-size:14px!important;padding:16px 14px!important}
+  .quiz-wrap{width:calc(100% - 22px);padding:18px 0 48px}
+}
+
+@media(max-width:340px){
+  .offer-kicker,.offer-timer{font-size:9px;letter-spacing:.025em}
+  .price{font-size:41px}
+  .price small{font-size:11px}
+}
+
 </style>
 </head>
 <body>
