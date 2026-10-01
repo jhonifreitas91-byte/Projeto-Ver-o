@@ -128,7 +128,7 @@
       min-width:0;display:flex;gap:16px;overflow-x:auto;
       scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;
       padding:8px 4px 22px;overscroll-behavior-x:contain;
-      -webkit-overflow-scrolling:touch;touch-action:pan-x;
+      -webkit-overflow-scrolling:touch;touch-action:auto;
       cursor:grab;user-select:none;
     }
     .carousel:active{cursor:grabbing}
@@ -863,43 +863,43 @@ body.quiz-open{overflow:hidden}
           <div class="carousel" id="results" tabindex="0">
           <article class="result">
             <div class="beforeafter"><div class="before"><img src="antes1.jpg" alt="Antes - cliente 1"></div><div class="after"><img src="depois1.jpg" alt="Depois - cliente 1"></div></div>
-            <strong>Cleide Moura</strong><br><small>Resultado de exercícios.</small>
+            <strong>Cleide Moura</strong><br><small>2 meses de exercícios.</small>
           </article>
           <article class="result">
             <div class="beforeafter"><div class="before"><img src="antes2.jpg" alt="Antes - cliente 2"></div><div class="after"><img src="depois2.jpg" alt="Depois - cliente 2"></div></div>
-            <strong>Nayara Castilho</strong><br><small>Resultado de exercícios.</small>
+            <strong>Nayara Castilho</strong><br><small>2 meses de exercicíos.</small>
           </article>
           <article class="result">
             <div class="beforeafter"><div class="before"><img src="antes3.jpg" alt="Antes - cliente 3"></div><div class="after"><img src="depois3.jpg" alt="Depois - cliente 3"></div></div>
-            <strong>Mirella Castanheira</strong><br><small>Resultado de exercícios.</small>
+            <strong>Mirella Castanheira</strong><br><small>1 mês de exercicíos.</small>
           </article>
           <article class="result">
             <div class="beforeafter"><div class="before"><img src="antes4.jpg" alt="Antes - cliente 4"></div><div class="after"><img src="depois4.jpg" alt="Depois - cliente 4"></div></div>
-            <strong>Heloisa Moura</strong><br><small>Resultado de exercícios.</small>
+            <strong>Cliente 4</strong><br><small>Resultado de exercícios.</small>
           </article>
           <article class="result">
             <div class="beforeafter"><div class="before"><img src="antes5.jpg" alt="Antes - cliente 5"></div><div class="after"><img src="depois5.jpg" alt="Depois - cliente 5"></div></div>
-            <strong>Gisele Souza</strong><br><small>Resultado de exercícios.</small>
+            <strong>Cliente 5</strong><br><small>Resultado de exercícios.</small>
           </article>
           <article class="result">
             <div class="beforeafter"><div class="before"><img src="antes6.jpg" alt="Antes - cliente 6"></div><div class="after"><img src="depois6.jpg" alt="Depois - cliente 6"></div></div>
-            <strong>Grazielly Pinto</strong><br><small>Resultado de exercícios.</small>
+            <strong>Cliente 6</strong><br><small>Resultado de exercícios.</small>
           </article>
           <article class="result">
             <div class="beforeafter"><div class="before"><img src="antes7.jpg" alt="Antes - cliente 7"></div><div class="after"><img src="depois7.jpg" alt="Depois - cliente 7"></div></div>
-            <strong>Maiara Nakamoto</strong><br><small>Resultado de exercícios.</small>
+            <strong>Cliente 7</strong><br><small>Resultado de exercícios.</small>
           </article>
           <article class="result">
             <div class="beforeafter"><div class="before"><img src="antes8.jpg" alt="Antes - cliente 8"></div><div class="after"><img src="depois8.jpg" alt="Depois - cliente 8"></div></div>
-            <strong>Silvana Martins</strong><br><small>Resultado de exercícios.</small>
+            <strong>Cliente 8</strong><br><small>Resultado de exercícios.</small>
           </article>
           <article class="result">
             <div class="beforeafter"><div class="before"><img src="antes9.jpg" alt="Antes - cliente 9"></div><div class="after"><img src="depois9.jpg" alt="Depois - cliente 9"></div></div>
-            <strong>Paulinia Lopes</strong><br><small>Resultado de exercícios.</small>
+            <strong>Cliente 9</strong><br><small>Resultado de exercícios.</small>
           </article>
           <article class="result">
             <div class="beforeafter"><div class="before"><img src="antes10.jpg" alt="Antes - cliente 10"></div><div class="after"><img src="depois10.jpg" alt="Depois - cliente 10"></div></div>
-            <strong>Andrezza Dias</strong><br><small>Resultado de exercícios.</small>
+            <strong>Cliente 10</strong><br><small>Resultado de exercícios.</small>
           </article>
           </div>
           <button class="slider-side slider-side-right" data-target="results" data-dir="1" aria-label="Ver próximo resultado">›</button>
@@ -1055,30 +1055,9 @@ body.quiz-open{overflow:hidden}
     });
 
     document.querySelectorAll('.carousel').forEach(carousel=>{
-      let pointerDown=false, startX=0, startScroll=0, moved=false;
-
-      carousel.addEventListener('pointerdown', e=>{
-        pointerDown=true; moved=false; startX=e.clientX; startScroll=carousel.scrollLeft;
-        carousel.setPointerCapture?.(e.pointerId);
-      });
-      carousel.addEventListener('pointermove', e=>{
-        if(!pointerDown) return;
-        const dx=e.clientX-startX;
-        if(Math.abs(dx)>5) moved=true;
-        carousel.scrollLeft=startScroll-dx;
-      });
-      const stopDrag=e=>{
-        if(!pointerDown)return;
-        pointerDown=false;
-        if(e?.pointerId!=null) carousel.releasePointerCapture?.(e.pointerId);
-        setTimeout(()=>updateCarouselButtons(carousel),50);
-      };
-      carousel.addEventListener('pointerup',stopDrag);
-      carousel.addEventListener('pointercancel',stopDrag);
-      carousel.addEventListener('mouseleave',stopDrag);
-      carousel.addEventListener('click',e=>{
-        if(moved){e.preventDefault();e.stopPropagation();moved=false;}
-      },true);
+      // O toque vertical deve continuar rolando a página mesmo quando começa
+      // sobre fotos ou vídeos. O navegador cuida do swipe horizontal nativo.
+      carousel.style.touchAction='auto';
       carousel.addEventListener('scroll',()=>updateCarouselButtons(carousel),{passive:true});
       carousel.addEventListener('keydown',e=>{
         if(e.key==='ArrowLeft'||e.key==='ArrowRight'){
