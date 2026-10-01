@@ -105,6 +105,14 @@
       display:flex;gap:11px;font-size:14px;color:#45423f
     }
     .check b{color:var(--green);font-size:18px;line-height:1}
+    .material-preview{margin-top:58px}.material-head{margin-bottom:28px}.material-head h2{font-size:clamp(30px,4vw,42px)}
+    .material-head p{margin-top:10px}.material-carousel-stage{display:grid;grid-template-columns:46px minmax(0,1fr) 46px;align-items:center;gap:12px;max-width:900px;margin:auto}
+    .material-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:5px 2px 14px}
+    .material-carousel::-webkit-scrollbar{display:none}.material-slide{flex:0 0 100%;scroll-snap-align:center;border:1px solid #eadfd9;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 15px 38px rgba(35,25,20,.10)}
+    .material-slide img{width:100%;height:440px;display:block;object-fit:cover;background:#f5f1ef}.material-arrow{width:46px;height:46px;border-radius:50%;border:1px solid #e5dfda;background:#fff;color:#181817;display:grid;place-items:center;font-size:36px;cursor:pointer;box-shadow:0 8px 22px rgba(35,25,20,.12)}
+    .material-video-box{max-width:900px;margin:34px auto 0;padding:26px;background:#fff;border:1px solid #eadfd9;border-radius:24px;box-shadow:0 15px 38px rgba(35,25,20,.08)}
+    .material-video-title{display:flex;align-items:center;gap:12px;margin-bottom:17px}.material-video-title>span{width:42px;height:42px;border-radius:13px;background:var(--soft);display:grid;place-items:center;font-size:20px}
+    .material-video-title strong{font-size:18px}.material-video-title p{font-size:13px;color:var(--muted);margin-top:2px}.material-video{overflow:hidden;border-radius:18px;background:#181817;aspect-ratio:16/9}.material-video video{width:100%;height:100%;display:block;object-fit:cover}
     .band{background:#181817;color:#fff}
     .band .section-head p{color:#bdb9b5}
     .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -270,7 +278,7 @@
       .review,.result{flex-basis:100%;min-width:0}.offer-box{padding:30px 20px}.price{font-size:50px}
       .carousel-stage{grid-template-columns:34px minmax(0,1fr) 34px;gap:5px}
       .slider-side{width:34px;height:34px;font-size:28px}
-      .nav-cta{padding:10px 14px;font-size:12px}.price-wrap{gap:7px}.price{font-size:50px}.price-arrow{display:none}
+      .nav-cta{padding:10px 14px;font-size:12px}.price-wrap{gap:7px}.price{font-size:50px}.price-arrow{display:none}.material-carousel-stage{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}.material-arrow{width:34px;height:34px;font-size:27px}.material-slide img{height:330px}.material-video-box{padding:18px}
     }
   
 /* ===== QUIZ DE ENTRADA ===== */
@@ -515,13 +523,30 @@ body.quiz-open{overflow:hidden}
           <article class="day"><div class="day-num">DIA 06</div><h3>Queima de 1000 calorias</h3><p>Uma sessão mais longa e intensa. Faça adaptações conforme seu condicionamento.</p></article>
         </div>
 
-        <div class="checklist">
-          <div class="check"><b>✓</b><span>Vídeos com duração aproximada de 10 a 59 minutos.</span></div>
-          <div class="check"><b>✓</b><span>Ilustrações dos exercícios para acompanhar os movimentos.</span></div>
-          <div class="check"><b>✓</b><span>Nome dos exercícios apresentados em cada treino.</span></div>
-          <div class="check"><b>✓</b><span>Textos, dicas e materiais de apoio para consulta.</span></div>
-          <div class="check"><b>✓</b><span>Material que pode ser impresso para consultar durante o treino.</span></div>
-          <div class="check"><b>✓</b><span>Organização em 6 pastas, uma para cada dia.</span></div>
+        <div class="material-preview">
+          <div class="section-head material-head">
+            <div class="kicker">Por dentro do material</div>
+            <h2>Veja um pouco do material.</h2>
+            <p>Confira uma prévia das ilustrações e de uma aula do Projeto Verão em Casa.</p>
+          </div>
+          <div class="material-carousel-stage">
+            <button class="material-arrow" type="button" data-material-dir="-1" aria-label="Ilustração anterior">‹</button>
+            <div class="material-carousel" id="materialCarousel">
+              <div class="material-slide"><img src="ilustracao1.jpg" alt="Ilustração de exercício"></div>
+              <div class="material-slide"><img src="ilustracao2.jpg" alt="Ilustração de exercício"></div>
+              <div class="material-slide"><img src="ilustracao3.jpg" alt="Ilustração de exercício"></div>
+            </div>
+            <button class="material-arrow" type="button" data-material-dir="1" aria-label="Próxima ilustração">›</button>
+          </div>
+          <div class="material-video-box">
+            <div class="material-video-title"><span>🎥</span><div><strong>Um pedacinho da videoaula</strong><p>Veja como são os treinos por dentro.</p></div></div>
+            <div class="material-video">
+              <video controls playsinline preload="metadata" poster="material-video-thumb.jpg">
+                <source src="video-aula-preview.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+              </video>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -657,6 +682,7 @@ body.quiz-open{overflow:hidden}
   </footer>
 
   <script>
+    document.querySelectorAll('.material-arrow').forEach(btn=>btn.addEventListener('click',()=>{const c=document.getElementById('materialCarousel');c.scrollBy({left:Number(btn.dataset.materialDir)*c.clientWidth,behavior:'smooth'});}));
     // Navegação dos carrosséis: setas laterais + arrastar no mouse/toque + teclado.
     document.querySelectorAll('.slider-side').forEach(btn=>{
       btn.addEventListener('click',()=>{
