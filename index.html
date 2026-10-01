@@ -206,14 +206,25 @@
       border-radius:0 0 14px 14px;font-size:11px;font-weight:950;
       letter-spacing:.12em;box-shadow:0 8px 20px rgba(239,111,97,.22);
     }
+    .offer-kicker-row{
+      margin-top:22px;margin-bottom:14px;
+      display:flex;align-items:center;justify-content:center;gap:12px;
+      flex-wrap:nowrap;text-align:center;
+    }
     .offer-kicker{
-      margin-top:22px;margin-bottom:10px;
+      margin:0;
       font-size:12px;font-weight:900;text-transform:uppercase;
       letter-spacing:.12em;color:var(--primary-dark);
     }
+    .offer-timer{
+      flex:0 0 auto;
+      font-size:12px;font-weight:900;letter-spacing:.12em;
+      color:var(--primary-dark);font-variant-numeric:tabular-nums;
+      white-space:nowrap;
+    }
     .price-wrap{
       display:flex;align-items:center;justify-content:center;gap:13px;
-      flex-wrap:wrap;margin:4px 0 8px;
+      flex-wrap:nowrap;margin:4px auto 10px;text-align:center;
     }
     .price-old{
       text-decoration:line-through;color:#a09b96;font-size:16px;font-weight:750;
@@ -221,13 +232,19 @@
     .price-arrow{font-size:18px;color:#aaa39e;font-weight:900}
     .price{
       font-size:62px;line-height:1;font-weight:950;letter-spacing:-.06em;
-      margin:0;color:var(--primary-dark);
+      margin:0;color:var(--primary-dark);white-space:nowrap;
+    }
+    .price small{
+      display:inline;font-size:14px;line-height:1;font-weight:850;
+      letter-spacing:0;color:#6b625e;white-space:nowrap;
     }
     .discount-badge{
-      display:inline-flex;align-items:center;justify-content:center;
-      margin:8px auto 16px;background:#181817;color:#fff;
-      padding:7px 12px;border-radius:999px;font-size:11px;
-      font-weight:950;letter-spacing:.05em;
+      display:flex;align-items:center;justify-content:center;
+      width:max-content;max-width:100%;margin:10px auto 18px;
+      background:var(--primary);color:#fff;
+      padding:10px 16px;border-radius:999px;font-size:12px;
+      font-weight:950;letter-spacing:.06em;text-align:center;
+      box-shadow:0 10px 24px rgba(239,111,97,.25);
     }
     .offer-value{
       font-size:15px;color:#4d4946;max-width:520px;margin:0 auto 4px;
@@ -624,13 +641,16 @@ body.quiz-open{overflow:hidden}
           <p>Um programa digital simples para você acessar de onde estiver.</p>
         </div>
         <div class="offer-box">
-          <div class="offer-kicker">Aproveite enquanto a oferta está disponível</div>
+          <div class="offer-kicker-row">
+            <div class="offer-kicker">Aproveite enquanto a oferta está disponível</div>
+            <div class="offer-timer" id="offerTimer" aria-label="Tempo restante da oferta">05:00</div>
+          </div>
           <div class="price-wrap">
             <span class="price-old">DE R$ 39,90</span>
             <span class="price-arrow">→</span>
             <div class="price">R$ 19,90 <small>pagamento único*</small></div>
           </div>
-          <div class="discount-badge">50% DE DESCONTO • PAGAMENTO ÚNICO</div>
+          <div class="discount-badge">🔥 PROMOÇÃO • 50% DE DESCONTO • PAGAMENTO ÚNICO 🔥</div>
           <p class="offer-value">Você recebe o acesso ao conteúdo digital descrito nesta página, sem mensalidade.</p>
           <div class="offer-list">
             <div>✓ 6 dias de treino</div>
@@ -791,5 +811,24 @@ body.quiz-open{overflow:hidden}
 })();
 </script>
 
+
+<script>
+(function(){
+  const timer=document.getElementById('offerTimer');
+  if(!timer) return;
+  let remaining=300;
+  function render(){
+    const m=String(Math.floor(remaining/60)).padStart(2,'0');
+    const sec=String(remaining%60).padStart(2,'0');
+    timer.textContent=m+':'+sec;
+  }
+  render();
+  setInterval(function(){
+    remaining--;
+    if(remaining<0) remaining=300;
+    render();
+  },1000);
+})();
+</script>
 </body>
 </html>
