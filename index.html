@@ -156,9 +156,9 @@
     }
     .stars{color:#efb34e;letter-spacing:2px;font-size:14px;margin-bottom:15px}
     .video-review{flex:0 0 100%;min-width:0;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 12px 32px rgba(35,25,20,.07)}
-    .video-review-media{width:100%;overflow:hidden;border-radius:17px;background:#181817;aspect-ratio:16/9}
-    .video-review-media video{width:100%;height:100%;display:block;object-fit:cover}
-    .video-review-info{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 4px 2px}
+    .video-review-media{width:100%;overflow:hidden;border-radius:17px;background:#181817;aspect-ratio:9/16}
+    .video-review-media video{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+    .video-review-info{display:flex;align-items:center;justify-content:flex-start;gap:12px;padding:14px 4px 2px}
     .video-review-info .stars{margin:0;font-size:13px}
     .video-review-info strong{font-size:14px}
     .review p{font-size:15px;color:#45423f;min-height:105px}
@@ -824,7 +824,7 @@ body.quiz-open{overflow:hidden}
                   Seu navegador não suporta a reprodução de vídeos.
                 </video>
               </div>
-              <div class="video-review-info"><div class="stars">★★★★★</div><strong>Avaliação em vídeo 1</strong></div>
+              <div class="video-review-info"><div class="stars">★★★★★</div><strong>Alice Santos</strong></div>
             </article>
             <article class="video-review">
               <div class="video-review-media">
@@ -833,7 +833,7 @@ body.quiz-open{overflow:hidden}
                   Seu navegador não suporta a reprodução de vídeos.
                 </video>
               </div>
-              <div class="video-review-info"><div class="stars">★★★★★</div><strong>Avaliação em vídeo 2</strong></div>
+              <div class="video-review-info"><div class="stars">★★★★★</div><strong>Thayna Cardoso</strong></div>
             </article>
             <article class="video-review">
               <div class="video-review-media">
@@ -842,7 +842,7 @@ body.quiz-open{overflow:hidden}
                   Seu navegador não suporta a reprodução de vídeos.
                 </video>
               </div>
-              <div class="video-review-info"><div class="stars">★★★★★</div><strong>Avaliação em vídeo 3</strong></div>
+              <div class="video-review-info"><div class="stars">★★★★★</div><strong>Julia Pedroso</strong></div>
             </article>
           </div>
           <button class="slider-side slider-side-right" data-target="videoReviews" data-dir="1" aria-label="Ver próxima avaliação em vídeo">›</button>
@@ -975,6 +975,31 @@ body.quiz-open{overflow:hidden}
       if(next===index){ updateCarouselButtons(c); return; }
       c.scrollTo({left:items[next].offsetLeft,behavior:'smooth'});
       setTimeout(()=>updateCarouselButtons(c),300);
+    }
+
+    // Depoimentos em vídeo: ao trocar de card, o vídeo anterior volta para a thumb e reinicia.
+    const reviewVideos = Array.from(document.querySelectorAll('#videoReviews video'));
+    function resetReviewVideo(video){
+      try {
+        video.pause();
+        video.currentTime = 0;
+        video.load();
+      } catch(e) {}
+    }
+    reviewVideos.forEach(video=>{
+      video.addEventListener('play',()=>{
+        reviewVideos.forEach(other=>{ if(other !== video) resetReviewVideo(other); });
+      });
+    });
+    const videoReviewsCarousel = document.getElementById('videoReviews');
+    if(videoReviewsCarousel){
+      let reviewScrollTimer;
+      videoReviewsCarousel.addEventListener('scroll',()=>{
+        clearTimeout(reviewScrollTimer);
+        reviewScrollTimer = setTimeout(()=>{
+          reviewVideos.forEach(resetReviewVideo);
+        }, 120);
+      }, {passive:true});
     }
 
     document.querySelectorAll('.slider-side').forEach(btn=>{
