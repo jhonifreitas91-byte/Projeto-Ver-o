@@ -155,6 +155,12 @@
       flex:0 0 100%;min-width:0;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px
     }
     .stars{color:#efb34e;letter-spacing:2px;font-size:14px;margin-bottom:15px}
+    .video-review{flex:0 0 100%;min-width:0;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 12px 32px rgba(35,25,20,.07)}
+    .video-review-media{width:100%;overflow:hidden;border-radius:17px;background:#181817;aspect-ratio:16/9}
+    .video-review-media video{width:100%;height:100%;display:block;object-fit:cover}
+    .video-review-info{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 4px 2px}
+    .video-review-info .stars{margin:0;font-size:13px}
+    .video-review-info strong{font-size:14px}
     .review p{font-size:15px;color:#45423f;min-height:105px}
     .person{display:flex;align-items:center;gap:11px;margin-top:18px}
     .avatar{width:52px;height:52px;min-width:52px;border-radius:50%;overflow:hidden;background:var(--soft);display:grid;place-items:center;font-weight:900;color:var(--primary)}
@@ -803,20 +809,43 @@ body.quiz-open{overflow:hidden}
     <section id="depoimentos">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">Experiências</div>
-          <h2>Veja algumas avaliações das nossas clientes.</h2>
-          <p>A proxima a aparecer aqui pode ser você!.</p>
+          <div class="kicker">Avaliações em vídeo</div>
+          <h2>Veja o que nossas clientes estão falando.</h2>
+          <p>Assista aos depoimentos em vídeo e conheça a experiência de quem já fez o Projeto Verão.</p>
         </div>
 
-        <div class="carousel-stage">
-          <button class="slider-side slider-side-left" data-target="reviews" data-dir="-1" aria-label="Ver avaliação anterior">‹</button>
-          <div class="carousel" id="reviews" tabindex="0">
-          <article class="review"><div class="stars">★★★★★</div><p>Estou irreconhecível! Adorei</p><div class="person"><div class="avatar"><img src="cliente1.jpg" alt="Foto da cliente 1"></div><div><strong>Jéssica Silva</strong><small></small></div></div></article>
-          <article class="review"><div class="stars">★★★★★</div><p>Me sinto muito bem, as roupas estão servindo rsrsrs</p><div class="person"><div class="avatar"><img src="cliente2.jpg" alt="Foto da cliente 2"></div><div><strong>Ana Paula</strong><small></small></div></div></article>
-          <article class="review"><div class="stars">★★★★★</div><p>Perdi 10kgs em 1 mes seguindo os videos.</p><div class="person"><div class="avatar"><img src="cliente3.jpg" alt="Foto da cliente 3"></div><div><strong>Andressa Marques</strong><small></small></div></div></article>
-          <article class="review"><div class="stars">★★★★★</div><p>No começo eu desistia fácil, mais hj não perco um dia!!</p><div class="person"><div class="avatar"><img src="cliente4.jpg" alt="Foto da cliente 4"></div><div><strong>Deyse Antunes</strong><small></small></div></div></article>
+        <div class="carousel-stage video-review-stage">
+          <button class="slider-side slider-side-left" data-target="videoReviews" data-dir="-1" aria-label="Ver avaliação em vídeo anterior">‹</button>
+          <div class="carousel video-review-carousel" id="videoReviews" tabindex="0">
+            <article class="video-review">
+              <div class="video-review-media">
+                <video controls playsinline preload="metadata" poster="thumbfalada1.jpg">
+                  <source src="videofalado1.mp4" type="video/mp4">
+                  Seu navegador não suporta a reprodução de vídeos.
+                </video>
+              </div>
+              <div class="video-review-info"><div class="stars">★★★★★</div><strong>Avaliação em vídeo 1</strong></div>
+            </article>
+            <article class="video-review">
+              <div class="video-review-media">
+                <video controls playsinline preload="metadata" poster="thumbfalada2.jpg">
+                  <source src="videofalado2.mp4" type="video/mp4">
+                  Seu navegador não suporta a reprodução de vídeos.
+                </video>
+              </div>
+              <div class="video-review-info"><div class="stars">★★★★★</div><strong>Avaliação em vídeo 2</strong></div>
+            </article>
+            <article class="video-review">
+              <div class="video-review-media">
+                <video controls playsinline preload="metadata" poster="thumbfalada3.jpg">
+                  <source src="videofalado3.mp4" type="video/mp4">
+                  Seu navegador não suporta a reprodução de vídeos.
+                </video>
+              </div>
+              <div class="video-review-info"><div class="stars">★★★★★</div><strong>Avaliação em vídeo 3</strong></div>
+            </article>
           </div>
-          <button class="slider-side slider-side-right" data-target="reviews" data-dir="1" aria-label="Ver próxima avaliação">›</button>
+          <button class="slider-side slider-side-right" data-target="videoReviews" data-dir="1" aria-label="Ver próxima avaliação em vídeo">›</button>
         </div>
       </div>
     </section>
@@ -826,7 +855,7 @@ body.quiz-open{overflow:hidden}
         <div class="section-head">
           <div class="kicker">Antes e depois</div>
           <h2>Resultados reais merecem espaço de destaque.</h2>
-          <p>A alegria das nossas clientes também é a nossa alegria.</p>
+          <p>Use apenas fotos e relatos com autorização das clientes. Os cards abaixo são placeholders.</p>
         </div>
 
         <div class="carousel-stage">
@@ -879,7 +908,7 @@ body.quiz-open{overflow:hidden}
           </div>
           <!-- TROQUE O HREF ABAIXO PELO SEU LINK DE CHECKOUT -->
           <a class="btn btn-primary" style="width:100%;padding:17px" href="https://pay.cakto.com.br/heygsp4_1157628">🔥 QUERO APROVEITAR A OFERTA →</a>
-          <div class="guarantee">🔒 Pagamento processado de forma segura • Receba diretamente no seu WhatsApp.</div>
+          <div class="guarantee">🔒 Pagamento processado de forma segura • *Condições conforme seu checkout.</div>
         </div>
       </div>
     </section>
