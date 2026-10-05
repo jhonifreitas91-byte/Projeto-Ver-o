@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -20,580 +21,1509 @@
       --radius:24px;
       --max:1120px;
     }
+
     *{box-sizing:border-box;margin:0;padding:0}
+
     html{scroll-behavior:smooth}
+
     body{
       font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color:var(--text);background:var(--bg);line-height:1.6;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.6;
       -webkit-font-smoothing:antialiased;
     }
+
     a{text-decoration:none;color:inherit}
+
     img{max-width:100%;display:block}
-    .container{width:min(calc(100% - 40px),var(--max));margin:auto}
+
+    .container{
+      width:min(calc(100% - 40px),var(--max));
+      margin:auto
+    }
+
     .topbar{
-      background:#181817;color:#fff;text-align:center;padding:12px 16px;font-size:13px;font-weight:900;
+      background:#181817;
+      color:#fff;
+      text-align:center;
+      padding:12px 16px;
+      font-size:13px;
+      font-weight:900;
       letter-spacing:.02em
     }
+
     nav{
-      position:sticky;top:0;z-index:50;background:rgba(255,253,251,.88);
-      backdrop-filter:blur(14px);border-bottom:1px solid rgba(236,232,228,.8)
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,253,251,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(236,232,228,.8)
     }
-    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{font-weight:900;letter-spacing:-.04em;font-size:19px}
+
+    .nav-inner{
+      height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px
+    }
+
+    .brand{
+      font-weight:900;
+      letter-spacing:-.04em;
+      font-size:19px
+    }
+
     .brand span{color:var(--primary)}
-    .nav-links{display:flex;gap:26px;color:#595653;font-size:14px;font-weight:650}
+
+    .nav-links{
+      display:flex;
+      gap:26px;
+      color:#595653;
+      font-size:14px;
+      font-weight:650
+    }
+
     .nav-cta,.btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:9px;
-      border:0;border-radius:999px;padding:13px 21px;font-weight:800;cursor:pointer;
-      transition:.2s ease;font-size:14px
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      border:0;
+      border-radius:999px;
+      padding:13px 21px;
+      font-weight:800;
+      cursor:pointer;
+      transition:.2s ease;
+      font-size:14px
     }
-    .nav-cta,.btn-primary{background:var(--primary);color:#fff;box-shadow:0 10px 25px rgba(239,111,97,.24)}
-    .nav-cta:hover,.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
-    .btn-dark{background:#181817;color:#fff}
-    .btn-dark:hover{transform:translateY(-1px);opacity:.93}
-    .hero{padding:78px 0 70px;overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:65px}
+
+    .nav-cta,.btn-primary{
+      background:var(--primary);
+      color:#fff;
+      box-shadow:0 10px 25px rgba(239,111,97,.24)
+    }
+
+    .nav-cta:hover,.btn-primary:hover{
+      background:var(--primary-dark);
+      transform:translateY(-1px)
+    }
+
+    .btn-dark{
+      background:#181817;
+      color:#fff
+    }
+
+    .btn-dark:hover{
+      transform:translateY(-1px);
+      opacity:.93
+    }
+
+    .hero{
+      padding:78px 0 70px;
+      overflow:hidden
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.04fr .96fr;
+      align-items:center;
+      gap:65px
+    }
+
     .eyebrow{
-      display:inline-flex;align-items:center;gap:8px;background:var(--soft);color:var(--primary-dark);
-      border:1px solid #ffd9d3;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:850;margin-bottom:20px
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:var(--soft);
+      color:var(--primary-dark);
+      border:1px solid #ffd9d3;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:850;
+      margin-bottom:20px
     }
-    h1{font-size:clamp(42px,6vw,70px);line-height:.99;letter-spacing:-.055em;max-width:680px}
-    h1 em{font-style:normal;color:var(--primary)}
-    .hero p{font-size:18px;color:var(--muted);max-width:580px;margin:23px 0 28px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-    .trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:23px;color:#77736f;font-size:12px;font-weight:650}
-    .trust span{display:flex;align-items:center;gap:6px}
+
+    h1{
+      font-size:clamp(42px,6vw,70px);
+      line-height:.99;
+      letter-spacing:-.055em;
+      max-width:680px
+    }
+
+    h1 em{
+      font-style:normal;
+      color:var(--primary)
+    }
+
+    .hero p{
+      font-size:18px;
+      color:var(--muted);
+      max-width:580px;
+      margin:23px 0 28px
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap
+    }
+
+    .trust{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      margin-top:23px;
+      color:#77736f;
+      font-size:12px;
+      font-weight:650
+    }
+
+    .trust span{
+      display:flex;
+      align-items:center;
+      gap:6px
+    }
 
     .hero-content{text-align:center}
-    .hero-content h1,.hero-content p{margin-left:auto;margin-right:auto}
+
+    .hero-content h1,
+    .hero-content p{
+      margin-left:auto;
+      margin-right:auto
+    }
+
     .hero-content .hero-actions{justify-content:center}
+
     .hero-content .trust{justify-content:center}
-    .hero-video{ width:min(300px,100%); margin:26px auto 24px; border-radius:22px; overflow:hidden; background:#171615; box-shadow:0 18px 55px rgba(35,25,20,.14); border:1px solid #eee5e0; aspect-ratio:9/16; position:relative; } .hero-video video{ width:100%; height:100%; display:block; object-fit:cover; }
+
+    /* ===== ANTES E DEPOIS NO HERO ===== */
+    .hero-before-after{
+      width:100%;
+      max-width:760px;
+      margin:34px auto 0;
+      text-align:center
+    }
+
+    .hero-before-after h2{
+      margin:0 0 16px;
+      font-size:clamp(24px,4vw,34px);
+      line-height:1.1;
+      font-weight:950;
+      letter-spacing:-.035em
+    }
+
+    .hero-before-after img{
+      width:100%;
+      max-width:760px;
+      height:auto;
+      display:block;
+      margin:0 auto;
+      border-radius:20px;
+      border:1px solid var(--line);
+      box-shadow:0 15px 38px rgba(35,25,20,.10)
+    }
+
+    .hero-video{
+      width:min(300px,100%);
+      margin:26px auto 24px;
+      border-radius:22px;
+      overflow:hidden;
+      background:#171615;
+      box-shadow:0 18px 55px rgba(35,25,20,.14);
+      border:1px solid #eee5e0;
+      aspect-ratio:9/16;
+      position:relative
+    }
+
+    .hero-video video{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover
+    }
+
     .visual:before{
-      content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:#fff;
-      top:80px;right:45px;opacity:.65
+      content:"";
+      position:absolute;
+      width:330px;
+      height:330px;
+      border-radius:50%;
+      background:#fff;
+      top:80px;
+      right:45px;
+      opacity:.65
     }
+
     .mock-card{
-      position:absolute;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.9);
-      box-shadow:0 18px 45px rgba(53,37,31,.13);border-radius:20px;padding:20px
+      position:absolute;
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(255,255,255,.9);
+      box-shadow:0 18px 45px rgba(53,37,31,.13);
+      border-radius:20px;
+      padding:20px
     }
-    .mock-main{width:72%;left:11%;top:12%;z-index:2}
-    .mock-main .fake-video{height:230px;border-radius:15px;background:linear-gradient(135deg,#222,#6d514c);display:flex;align-items:center;justify-content:center;color:#fff;font-size:48px}
-    .mock-main h3{font-size:17px;margin-top:15px}
+
+    .mock-main{
+      width:72%;
+      left:11%;
+      top:12%;
+      z-index:2
+    }
+
+    .mock-main .fake-video{
+      height:230px;
+      border-radius:15px;
+      background:linear-gradient(135deg,#222,#6d514c);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:48px
+    }
+
+    .mock-main h3{
+      font-size:17px;
+      margin-top:15px
+    }
+
     .mock-main small{color:var(--muted)}
-    .mock-mini{right:7%;bottom:11%;width:48%;z-index:3}
-    .mock-mini .row{display:flex;gap:10px;align-items:center}
-    .circle{width:40px;height:40px;border-radius:50%;background:var(--soft);display:grid;place-items:center}
-    .mock-mini strong{font-size:13px}.mock-mini small{font-size:11px;color:var(--muted)}
+
+    .mock-mini{
+      right:7%;
+      bottom:11%;
+      width:48%;
+      z-index:3
+    }
+
+    .mock-mini .row{
+      display:flex;
+      gap:10px;
+      align-items:center
+    }
+
+    .circle{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:var(--soft);
+      display:grid;
+      place-items:center
+    }
+
+    .mock-mini strong{font-size:13px}
+
+    .mock-mini small{
+      font-size:11px;
+      color:var(--muted)
+    }
+
     section{padding:85px 0}
-    .section-head{text-align:center;max-width:700px;margin:0 auto 44px}
-    .kicker{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:var(--primary-dark);font-weight:900;margin-bottom:10px}
-    h2{font-size:clamp(31px,4vw,48px);line-height:1.05;letter-spacing:-.045em}
-    .section-head p{color:var(--muted);margin-top:15px;font-size:16px}
-    .days{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+
+    .section-head{
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 44px
+    }
+
+    .kicker{
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      color:var(--primary-dark);
+      font-weight:900;
+      margin-bottom:10px
+    }
+
+    h2{
+      font-size:clamp(31px,4vw,48px);
+      line-height:1.05;
+      letter-spacing:-.045em
+    }
+
+    .section-head p{
+      color:var(--muted);
+      margin-top:15px;
+      font-size:16px
+    }
+
+    .days{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px
+    }
+
     .day{
-      background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;
-      transition:.2s ease;min-height:205px
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:24px;
+      transition:.2s ease;
+      min-height:205px
     }
-    .day:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-    .day-num{font-size:12px;font-weight:900;color:var(--primary);margin-bottom:20px}
-    .day h3{font-size:19px;letter-spacing:-.02em;margin-bottom:8px}
-    .day p{font-size:14px;color:var(--muted)}
-    .checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+
+    .day:hover{
+      transform:translateY(-3px);
+      box-shadow:var(--shadow)
+    }
+
+    .day-num{
+      font-size:12px;
+      font-weight:900;
+      color:var(--primary);
+      margin-bottom:20px
+    }
+
+    .day h3{
+      font-size:19px;
+      letter-spacing:-.02em;
+      margin-bottom:8px
+    }
+
+    .day p{
+      font-size:14px;
+      color:var(--muted)
+    }
+
+    .checklist{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:28px
+    }
+
     .check{
-      background:#fff;border:1px solid var(--line);padding:17px 18px;border-radius:16px;
-      display:flex;gap:11px;font-size:14px;color:#45423f
+      background:#fff;
+      border:1px solid var(--line);
+      padding:17px 18px;
+      border-radius:16px;
+      display:flex;
+      gap:11px;
+      font-size:14px;
+      color:#45423f
     }
-    .check b{color:var(--green);font-size:18px;line-height:1}
-    .material-preview{margin-top:58px}.material-head{margin-bottom:28px}.material-head h2{font-size:clamp(30px,4vw,42px)}
-    .material-head p{margin-top:10px}.material-carousel-stage{display:grid;grid-template-columns:46px minmax(0,1fr) 46px;align-items:center;gap:12px;max-width:900px;margin:auto}
-    .material-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:5px 2px 14px}
-    .material-carousel::-webkit-scrollbar{display:none}.material-slide{flex:0 0 100%;scroll-snap-align:center;border:1px solid #eadfd9;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 15px 38px rgba(35,25,20,.10)}
-    .material-slide img{width:100%;height:auto;display:block;object-fit:contain;background:#f5f1ef}.material-arrow{width:46px;height:46px;border-radius:50%;border:1px solid #e5dfda;background:#fff;color:#181817;display:grid;place-items:center;font-size:36px;cursor:pointer;box-shadow:0 8px 22px rgba(35,25,20,.12)}
-    .material-video-box{max-width:900px;margin:34px auto 0;padding:26px;background:#fff;border:1px solid #eadfd9;border-radius:24px;box-shadow:0 15px 38px rgba(35,25,20,.08)}
-    .material-video-title{display:flex;align-items:center;gap:12px;margin-bottom:17px}.material-video-title>span{width:42px;height:42px;border-radius:13px;background:var(--soft);display:grid;place-items:center;font-size:20px}
-    .material-video-title strong{font-size:18px}.material-video-title p{font-size:13px;color:var(--muted);margin-top:2px}.material-video{overflow:hidden;border-radius:18px;background:#181817;aspect-ratio:16/9}.material-video video{width:100%;height:100%;display:block;object-fit:cover}
-    .band{background:#181817;color:#fff}
+
+    .check b{
+      color:var(--green);
+      font-size:18px;
+      line-height:1
+    }
+
+    .material-preview{margin-top:58px}
+
+    .material-head{margin-bottom:28px}
+
+    .material-head h2{
+      font-size:clamp(30px,4vw,42px)
+    }
+
+    .material-head p{margin-top:10px}
+
+    .material-carousel-stage{
+      display:grid;
+      grid-template-columns:46px minmax(0,1fr) 46px;
+      align-items:center;
+      gap:12px;
+      max-width:900px;
+      margin:auto
+    }
+
+    .material-carousel{
+      display:flex;
+      gap:16px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      scroll-behavior:smooth;
+      scrollbar-width:none;
+      padding:5px 2px 14px
+    }
+
+    .material-carousel::-webkit-scrollbar{display:none}
+
+    .material-slide{
+      flex:0 0 100%;
+      scroll-snap-align:center;
+      border:1px solid #eadfd9;
+      border-radius:22px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 15px 38px rgba(35,25,20,.10)
+    }
+
+    .material-slide img{
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:contain;
+      background:#f5f1ef
+    }
+
+    .material-arrow{
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      border:1px solid #e5dfda;
+      background:#fff;
+      color:#181817;
+      display:grid;
+      place-items:center;
+      font-size:36px;
+      cursor:pointer;
+      box-shadow:0 8px 22px rgba(35,25,20,.12)
+    }
+
+    .material-video-box{
+      max-width:900px;
+      margin:34px auto 0;
+      padding:26px;
+      background:#fff;
+      border:1px solid #eadfd9;
+      border-radius:24px;
+      box-shadow:0 15px 38px rgba(35,25,20,.08)
+    }
+
+    .material-video-title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:17px
+    }
+
+    .material-video-title>span{
+      width:42px;
+      height:42px;
+      border-radius:13px;
+      background:var(--soft);
+      display:grid;
+      place-items:center;
+      font-size:20px
+    }
+
+    .material-video-title strong{font-size:18px}
+
+    .material-video-title p{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:2px
+    }
+
+    .material-video{
+      overflow:hidden;
+      border-radius:18px;
+      background:#181817;
+      aspect-ratio:16/9
+    }
+
+    .material-video video{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover
+    }
+
+    .band{
+      background:#181817;
+      color:#fff
+    }
+
     .band .section-head p{color:#bdb9b5}
-    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .feature{padding:28px;border:1px solid #33302e;border-radius:22px;background:#201f1e}
-    .feature-icon{font-size:25px;margin-bottom:18px}
-    .feature h3{font-size:18px;margin-bottom:7px}.feature p{font-size:14px;color:#bcb8b4}
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px
+    }
+
+    .feature{
+      padding:28px;
+      border:1px solid #33302e;
+      border-radius:22px;
+      background:#201f1e
+    }
+
+    .feature-icon{
+      font-size:25px;
+      margin-bottom:18px
+    }
+
+    .feature h3{
+      font-size:18px;
+      margin-bottom:7px
+    }
+
+    .feature p{
+      font-size:14px;
+      color:#bcb8b4
+    }
+
     .carousel-wrap{position:relative}
+
     .carousel-stage{
-      position:relative;display:grid;grid-template-columns:48px minmax(0,1fr) 48px;
-      align-items:center;gap:12px;
+      position:relative;
+      display:grid;
+      grid-template-columns:48px minmax(0,1fr) 48px;
+      align-items:center;
+      gap:12px
     }
+
     .carousel{
-      min-width:0;display:flex;gap:16px;overflow-x:auto;
-      scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;
-      padding:8px 4px 22px;overscroll-behavior-x:contain;
-      -webkit-overflow-scrolling:touch;touch-action:auto;
-      cursor:grab;user-select:none;
+      min-width:0;
+      display:flex;
+      gap:16px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      scroll-behavior:smooth;
+      scrollbar-width:none;
+      padding:8px 4px 22px;
+      overscroll-behavior-x:contain;
+      -webkit-overflow-scrolling:touch;
+      touch-action:auto;
+      cursor:grab;
+      user-select:none
     }
+
     .carousel:active{cursor:grabbing}
+
     .carousel::-webkit-scrollbar{display:none}
+
     .slider-side{
-      width:48px;height:48px;border-radius:50%;border:1px solid #e5dfda;
-      background:#fff;color:#181817;display:grid;place-items:center;
-      font-size:38px;line-height:1;cursor:pointer;
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      border:1px solid #e5dfda;
+      background:#fff;
+      color:#181817;
+      display:grid;
+      place-items:center;
+      font-size:38px;
+      line-height:1;
+      cursor:pointer;
       box-shadow:0 8px 22px rgba(35,25,20,.12);
       transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
-      z-index:3;
+      z-index:3
     }
+
     .slider-side:hover{
-      transform:scale(1.06);box-shadow:0 11px 27px rgba(35,25,20,.17);
-      background:var(--soft);color:var(--primary-dark);
+      transform:scale(1.06);
+      box-shadow:0 11px 27px rgba(35,25,20,.17);
+      background:var(--soft);
+      color:var(--primary-dark)
     }
+
     .slider-side:active{transform:scale(.96)}
+
     .slider-side:focus-visible{
-      outline:3px solid rgba(239,111,97,.28);outline-offset:3px;
+      outline:3px solid rgba(239,111,97,.28);
+      outline-offset:3px
     }
-    .carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:5px 2px 20px}
-    .carousel::-webkit-scrollbar{display:none}
+
     .review,.result{
-      flex:0 0 100%;min-width:0;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px
+      flex:0 0 100%;
+      min-width:0;
+      scroll-snap-align:start;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:24px
     }
-    .stars{color:#efb34e;letter-spacing:2px;font-size:14px;margin-bottom:15px}
-    .video-review{flex:0 0 100%;min-width:0;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 12px 32px rgba(35,25,20,.07)}
-    .video-review-media{width:100%;overflow:hidden;border-radius:17px;background:#181817;aspect-ratio:9/16}
-    .video-review-media video{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
-    .video-review-info{display:flex;align-items:center;justify-content:flex-start;gap:12px;padding:14px 4px 2px}
-    .video-review-info .stars{margin:0;font-size:13px}
+
+    .stars{
+      color:#efb34e;
+      letter-spacing:2px;
+      font-size:14px;
+      margin-bottom:15px
+    }
+
+    .video-review{
+      flex:0 0 100%;
+      min-width:0;
+      scroll-snap-align:start;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:18px;
+      box-shadow:0 12px 32px rgba(35,25,20,.07)
+    }
+
+    .video-review-media{
+      width:100%;
+      overflow:hidden;
+      border-radius:17px;
+      background:#181817;
+      aspect-ratio:9/16
+    }
+
+    .video-review-media video{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      object-position:center
+    }
+
+    .video-review-info{
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      gap:12px;
+      padding:14px 4px 2px
+    }
+
+    .video-review-info .stars{
+      margin:0;
+      font-size:13px
+    }
+
     .video-review-info strong{font-size:14px}
-    .review p{font-size:15px;color:#45423f;min-height:105px}
-    .person{display:flex;align-items:center;gap:11px;margin-top:18px}
-    .avatar{width:52px;height:52px;min-width:52px;border-radius:50%;overflow:hidden;background:var(--soft);display:grid;place-items:center;font-weight:900;color:var(--primary)}
-    .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
-    .person strong{font-size:13px;display:block}.person small{font-size:11px;color:var(--muted)}
-    .beforeafter{
-      height:270px;border-radius:17px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;
-      background:#eee;position:relative;margin-bottom:16px
+
+    .review p{
+      font-size:15px;
+      color:#45423f;
+      min-height:105px
     }
-    .beforeafter > div{display:flex;align-items:flex-end;padding:12px;color:#fff;font-weight:900;font-size:12px}
-    .before{background:linear-gradient(160deg,#b8afa8,#776d67)}
+
+    .person{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      margin-top:18px
+    }
+
+    .avatar{
+      width:52px;
+      height:52px;
+      min-width:52px;
+      border-radius:50%;
+      overflow:hidden;
+      background:var(--soft);
+      display:grid;
+      place-items:center;
+      font-weight:900;
+      color:var(--primary)
+    }
+
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:50%;
+      display:block
+    }
+
+    .person strong{
+      font-size:13px;
+      display:block
+    }
+
+    .person small{
+      font-size:11px;
+      color:var(--muted)
+    }
+
+    .beforeafter{
+      height:270px;
+      border-radius:17px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      overflow:hidden;
+      background:#eee;
+      position:relative;
+      margin-bottom:16px
+    }
+
+    .beforeafter > div{
+      display:flex;
+      align-items:flex-end;
+      padding:12px;
+      color:#fff;
+      font-weight:900;
+      font-size:12px
+    }
+
+    .before{
+      background:linear-gradient(160deg,#b8afa8,#776d67)
+    }
 
     .beforeafter .before,
     .beforeafter .after{
       padding:0;
       overflow:hidden;
-      min-height:260px;
+      min-height:260px
     }
+
     .beforeafter img{
       width:100%;
       height:100%;
       min-height:260px;
       display:block;
-      object-fit:cover;
+      object-fit:cover
     }
-    .after{background:linear-gradient(160deg,#e8b6aa,#bd776b)}
+
+    .after{
+      background:linear-gradient(160deg,#e8b6aa,#bd776b)
+    }
+
     .result small{color:var(--muted)}
-    .offer{background:linear-gradient(145deg,#fff1ed,#fff);border:1px solid #f5d8d1}
-    .receive-head .kicker{
-      display:inline-flex;align-items:center;justify-content:center;
-      background:var(--soft);border:1px solid #ffd9d3;border-radius:999px;
-      padding:9px 16px;color:var(--primary-dark);font-size:13px;
-      font-weight:950;letter-spacing:.12em;
-    }
+
     .offer{
       background:
         radial-gradient(circle at 10% 10%,rgba(239,111,97,.13),transparent 30%),
         radial-gradient(circle at 90% 85%,rgba(239,111,97,.10),transparent 28%),
         linear-gradient(145deg,#fff1ed,#fff 62%);
-      border:1px solid #f5d8d1;
+      border:1px solid #f5d8d1
     }
+
+    .receive-head .kicker{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--soft);
+      border:1px solid #ffd9d3;
+      border-radius:999px;
+      padding:9px 16px;
+      color:var(--primary-dark);
+      font-size:13px;
+      font-weight:950;
+      letter-spacing:.12em
+    }
+
     .offer-box{
-      position:relative;overflow:hidden;
+      position:relative;
+      overflow:hidden;
+      max-width:760px;
+      width:min(760px,100%);
+      margin:auto;
+      background:#fff;
+      border:1px solid #eddeda;
+      border-radius:30px;
+      padding:42px;
+      box-shadow:var(--shadow);
+      text-align:center;
+      box-sizing:border-box
     }
+
     .offer-box:before{
       content:"OFERTA ESPECIAL";
-      position:absolute;top:0;left:50%;transform:translateX(-50%);
-      background:var(--primary);color:#fff;padding:9px 24px;
-      border-radius:0 0 14px 14px;font-size:11px;font-weight:950;
-      letter-spacing:.12em;box-shadow:0 8px 20px rgba(239,111,97,.22);
+      position:absolute;
+      top:0;
+      left:50%;
+      transform:translateX(-50%);
+      background:var(--primary);
+      color:#fff;
+      padding:9px 24px;
+      border-radius:0 0 14px 14px;
+      font-size:11px;
+      font-weight:950;
+      letter-spacing:.12em;
+      box-shadow:0 8px 20px rgba(239,111,97,.22)
     }
+
     .offer-kicker-row{
-      margin-top:22px;margin-bottom:14px;
-      display:flex;align-items:center;justify-content:center;gap:12px;
-      flex-wrap:nowrap;text-align:center;
+      width:100%;
+      box-sizing:border-box;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:nowrap;
+      gap:10px;
+      margin:22px auto 18px;
+      text-align:center
     }
+
     .offer-kicker{
-      margin:0;
-      font-size:12px;font-weight:900;text-transform:uppercase;
-      letter-spacing:.12em;color:var(--primary-dark);
+      flex:1 1 auto;
+      min-width:0;
+      font-size:12px;
+      line-height:1.25;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      color:var(--primary-dark)
     }
+
     .offer-timer{
       flex:0 0 auto;
-      font-size:12px;font-weight:900;letter-spacing:.12em;
-      color:var(--primary-dark);font-variant-numeric:tabular-nums;
-      white-space:nowrap;
+      font-size:12px;
+      line-height:1.25;
+      font-weight:900;
+      letter-spacing:.06em;
+      color:var(--primary-dark);
+      font-variant-numeric:tabular-nums;
+      white-space:nowrap
     }
+
     .price-wrap{
-      display:flex;align-items:center;justify-content:center;gap:13px;
-      flex-wrap:nowrap;margin:4px auto 10px;text-align:center;
+      width:100%;
+      box-sizing:border-box;
+      display:flex;
+      align-items:baseline;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:8px 12px;
+      margin:4px auto 12px;
+      text-align:center
     }
+
     .price-old{
-      text-decoration:line-through;color:#a09b96;font-size:16px;font-weight:750;
+      flex:0 0 auto;
+      text-decoration:line-through;
+      color:#a09b96;
+      font-size:15px;
+      font-weight:750
     }
-    .price-arrow{font-size:18px;color:#aaa39e;font-weight:900}
+
+    .price-arrow{
+      flex:0 0 auto;
+      font-size:18px;
+      color:#aaa39e;
+      font-weight:900
+    }
+
     .price{
-      font-size:62px;line-height:1;font-weight:950;letter-spacing:-.06em;
-      margin:0;color:var(--primary-dark);white-space:nowrap;
+      max-width:100%;
+      font-size:clamp(42px,7vw,62px);
+      line-height:1.05;
+      font-weight:950;
+      letter-spacing:-.045em;
+      margin:0;
+      color:var(--primary-dark);
+      white-space:nowrap
     }
+
     .price small{
-      display:inline;font-size:14px;line-height:1;font-weight:850;
-      letter-spacing:0;color:#6b625e;white-space:nowrap;
+      display:inline-block;
+      white-space:nowrap;
+      font-size:clamp(12px,2vw,14px);
+      line-height:1;
+      font-weight:850;
+      letter-spacing:0;
+      color:#6b625e
     }
+
     .discount-badge{
-      display:flex;align-items:center;justify-content:center;
-      width:max-content;max-width:100%;margin:10px auto 18px;
-      background:var(--primary);color:#fff;
-      padding:10px 16px;border-radius:999px;font-size:12px;
-      font-weight:950;letter-spacing:.06em;text-align:center;
-      box-shadow:0 10px 24px rgba(239,111,97,.25);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:fit-content;
+      max-width:100%;
+      margin:10px auto 18px;
+      background:var(--primary);
+      color:#fff;
+      padding:10px 16px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:950;
+      letter-spacing:.06em;
+      text-align:center;
+      line-height:1.3;
+      white-space:normal;
+      box-shadow:0 10px 24px rgba(239,111,97,.25)
     }
+
     .offer-value{
-      font-size:15px;color:#4d4946;max-width:520px;margin:0 auto 4px;
+      max-width:520px;
+      width:100%;
+      box-sizing:border-box;
+      margin:0 auto 4px;
+      line-height:1.5;
+      font-size:15px;
+      color:#4d4946
     }
+
     .offer-list{
-      border-top:1px solid #eee2dd;border-bottom:1px solid #eee2dd;
-      padding:22px 0;margin:24px 0;
+      width:100%;
+      box-sizing:border-box;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      text-align:left;
+      border-top:1px solid #eee2dd;
+      border-bottom:1px solid #eee2dd;
+      padding:22px 0;
+      margin:24px 0
     }
-    .offer-list div{font-weight:650}
+
+    .offer-list div{
+      font-size:13px;
+      color:#4d4946;
+      font-weight:650
+    }
+
     .offer .btn-primary{
-      font-size:16px;font-weight:950;min-height:58px;
-      box-shadow:0 14px 30px rgba(239,111,97,.30);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-sizing:border-box;
+      width:100%!important;
+      max-width:100%;
+      white-space:normal;
+      text-align:center;
+      line-height:1.25;
+      font-size:16px;
+      font-weight:950;
+      min-height:58px;
+      box-shadow:0 14px 30px rgba(239,111,97,.30)
     }
+
     .offer .btn-primary:hover{
-      box-shadow:0 17px 35px rgba(239,111,97,.36);
+      box-shadow:0 17px 35px rgba(239,111,97,.36)
     }
-    .offer-box{
-      max-width:760px;margin:auto;background:#fff;border:1px solid #eddeda;border-radius:30px;padding:42px;
-      box-shadow:var(--shadow);text-align:center
+
+    .guarantee{
+      max-width:100%;
+      line-height:1.5;
+      margin-top:18px;
+      font-size:12px;
+      color:var(--muted)
     }
-    .price-old{text-decoration:line-through;color:#a09b96;font-size:15px}
-    .price{font-size:58px;line-height:1;font-weight:950;letter-spacing:-.06em;margin:7px 0}
-    .price small{font-size:17px;letter-spacing:0;color:#77736f;font-weight:700}
-    .offer-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:left;margin:26px 0}
-    .offer-list div{font-size:13px;color:#4d4946}
-    .guarantee{margin-top:18px;font-size:12px;color:var(--muted)}
-    .faq{max-width:800px;margin:auto}
-    details{border-bottom:1px solid var(--line);padding:20px 0}
-    summary{cursor:pointer;list-style:none;font-weight:800;font-size:16px;display:flex;justify-content:space-between;gap:20px}
+
+    .faq{
+      max-width:800px;
+      margin:auto
+    }
+
+    details{
+      border-bottom:1px solid var(--line);
+      padding:20px 0
+    }
+
+    summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight:800;
+      font-size:16px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px
+    }
+
     summary::-webkit-details-marker{display:none}
-    summary:after{content:"+";color:var(--primary);font-size:21px}
+
+    summary:after{
+      content:"+";
+      color:var(--primary);
+      font-size:21px
+    }
+
     details[open] summary:after{content:"−"}
-    details p{color:var(--muted);font-size:14px;max-width:700px;padding-top:13px}
-    .final{padding:95px 0;text-align:center;background:#fff4f1}
-    .final p{color:var(--muted);max-width:600px;margin:15px auto 25px}
-    footer{padding:28px 0;border-top:1px solid var(--line);color:#88827d;font-size:12px;text-align:center}
-    .disclaimer{max-width:760px;margin:16px auto 0;font-size:11px;color:#99938e}
+
+    details p{
+      color:var(--muted);
+      font-size:14px;
+      max-width:700px;
+      padding-top:13px
+    }
+
+    .final{
+      padding:95px 0;
+      text-align:center;
+      background:#fff4f1
+    }
+
+    .final p{
+      color:var(--muted);
+      max-width:600px;
+      margin:15px auto 25px
+    }
+
+    footer{
+      padding:28px 0;
+      border-top:1px solid var(--line);
+      color:#88827d;
+      font-size:12px;
+      text-align:center
+    }
+
+    .disclaimer{
+      max-width:760px;
+      margin:16px auto 0;
+      font-size:11px;
+      color:#99938e
+    }
+
+    /* ===== QUIZ DE ENTRADA ===== */
+
+    #quizOverlay{
+      position:fixed;
+      inset:0;
+      z-index:99999;
+      overflow:hidden;
+      background:#fff;
+      color:#181817;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      opacity:1;
+      visibility:visible;
+      transition:opacity .35s ease,visibility .35s ease
+    }
+
+    #quizOverlay.quiz-hidden{
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none
+    }
+
+    .quiz-wrap{
+      width:min(720px,calc(100% - 24px));
+      height:100dvh;
+      min-height:0;
+      margin:0 auto;
+      padding:8px 0 8px;
+      display:block
+    }
+
+    .quiz-screen{
+      width:100%;
+      min-height:calc(100dvh - 16px);
+      box-sizing:border-box;
+      overflow:hidden;
+      display:none;
+      text-align:center;
+      animation:quizIn .28s ease
+    }
+
+    .quiz-screen.active{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start
+    }
+
+    @keyframes quizIn{
+      from{opacity:0;transform:translateY(10px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    .quiz-headline{
+      margin:0 auto 8px;
+      max-width:690px;
+      color:#181817;
+      font-size:clamp(27px,5vw,45px);
+      line-height:1.04;
+      letter-spacing:-.035em;
+      font-weight:900
+    }
+
+    .quiz-sub{
+      margin:0 auto;
+      max-width:650px;
+      color:#6e6b68;
+      font-size:14px;
+      line-height:1.3;
+      font-weight:500
+    }
+
+    .quiz-sub strong{
+      font-weight:900;
+      color:#181817
+    }
+
+    .quiz-question{
+      margin:20px auto 12px;
+      max-width:680px;
+      color:#181817;
+      font-size:clamp(22px,4vw,34px);
+      line-height:1.08;
+      letter-spacing:-.025em;
+      font-weight:900
+    }
+
+    .quiz-options{
+      width:min(540px,100%);
+      margin:0 auto;
+      display:flex;
+      flex-direction:column;
+      gap:7px
+    }
+
+    .quiz-option{
+      width:100%;
+      border:1px solid #e2ddd8;
+      background:#fff;
+      color:#292725;
+      border-radius:12px;
+      padding:11px 12px;
+      min-height:0;
+      font:inherit;
+      font-size:14px;
+      line-height:1.2;
+      font-weight:750;
+      cursor:pointer;
+      box-shadow:0 4px 15px rgba(35,25,20,.05);
+      transition:transform .16s ease,border-color .16s ease,background .16s ease,box-shadow .16s ease
+    }
+
+    .quiz-option:hover{
+      transform:translateY(-1px);
+      border-color:#ef6f61;
+      box-shadow:0 8px 22px rgba(239,111,97,.12)
+    }
+
+    .quiz-option:active{transform:scale(.99)}
+
+    .quiz-option.selected{
+      background:#ef6f61;
+      color:#fff;
+      border-color:#ef6f61
+    }
+
+    .quiz-progress{
+      width:min(540px,100%);
+      height:4px;
+      margin:0 auto 10px;
+      border-radius:999px;
+      background:#f0ece9;
+      overflow:hidden
+    }
+
+    .quiz-progress-bar{
+      height:100%;
+      width:20%;
+      border-radius:inherit;
+      background:#ef6f61;
+      transition:width .25s ease
+    }
+
+    .quiz-image-grid{
+      width:min(560px,100%);
+      margin:10px auto 0;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px
+    }
+
+    .quiz-image-choice{
+      border:0;
+      padding:0;
+      background:transparent;
+      cursor:pointer;
+      text-align:center
+    }
+
+    .quiz-image{
+      display:block;
+      width:100%;
+      aspect-ratio:1/1;
+      object-fit:cover;
+      border-radius:12px;
+      border:2px solid #e2ddd8;
+      background:#f4f1ef;
+      transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease
+    }
+
+    .quiz-image-choice:hover .quiz-image{
+      transform:translateY(-2px);
+      border-color:#ef6f61;
+      box-shadow:0 10px 24px rgba(239,111,97,.15)
+    }
+
+    .quiz-image-label{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:38px;
+      margin-top:5px;
+      padding:6px 7px;
+      border-radius:9px;
+      background:#ef6f61;
+      color:#fff;
+      font-size:10px;
+      line-height:1.15;
+      font-weight:850
+    }
+
+    .quiz-note{
+      width:min(540px,100%);
+      margin:10px auto 0;
+      padding:10px 12px;
+      border-radius:13px;
+      background:#fff5f2;
+      border:1px solid #ffd9d3;
+      text-align:left
+    }
+
+    .quiz-note-title{
+      margin:0 0 3px;
+      color:#d95649;
+      font-size:12px;
+      font-weight:900
+    }
+
+    .quiz-note p{
+      margin:0;
+      color:#6e6b68;
+      font-size:10px;
+      line-height:1.3
+    }
+
+    .quiz-continue{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:190px;
+      margin-top:14px;
+      padding:12px 22px;
+      min-height:44px;
+      border:0;
+      border-radius:13px;
+      background:#ef6f61;
+      color:#fff;
+      font:inherit;
+      font-size:14px;
+      font-weight:900;
+      cursor:pointer;
+      box-shadow:0 10px 25px rgba(239,111,97,.2)
+    }
+
+    .quiz-final-options{
+      width:min(540px,100%);
+      margin:14px auto 0;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px
+    }
+
+    .quiz-helper{
+      margin:0 auto 0;
+      color:#6e6b68;
+      font-size:12px;
+      font-weight:600
+    }
+
+    body.quiz-open{overflow:hidden}
+
+    /* ===== CARROSSÉIS ===== */
+
+    .carousel,
+    .material-carousel{
+      overscroll-behavior-x:contain;
+      scroll-snap-stop:always
+    }
+
+    .slider-side:disabled,
+    .material-arrow:disabled{
+      opacity:.35;
+      cursor:default;
+      transform:none !important;
+      box-shadow:none
+    }
+
     @media(max-width:850px){
-      .nav-links{display:none}.hero-grid{grid-template-columns:1fr;gap:40px}
-      .visual{min-height:430px}.days,.feature-grid{grid-template-columns:1fr 1fr}
+      .nav-links{display:none}
+
+      .hero-grid{
+        grid-template-columns:1fr;
+        gap:40px
+      }
+
+      .visual{min-height:430px}
+
+      .days,
+      .feature-grid{
+        grid-template-columns:1fr 1fr
+      }
     }
+
     @media(max-width:560px){
-      .container{width:min(calc(100% - 28px),var(--max))}
-      .hero{padding:55px 0}.hero p{font-size:16px}
-      .visual{min-height:360px}.mock-main{width:80%;left:7%;top:10%}.mock-main .fake-video{height:165px}
-      .mock-mini{width:60%;right:4%;bottom:7%}
-      section{padding:65px 0}.days,.feature-grid,.checklist,.offer-list{grid-template-columns:1fr}
-      .review,.result{flex-basis:100%;min-width:0}.offer-box{padding:30px 20px}.price{font-size:50px}
-      .carousel-stage{grid-template-columns:34px minmax(0,1fr) 34px;gap:5px}
-      .slider-side{width:34px;height:34px;font-size:28px}
-      .nav-cta{padding:10px 14px;font-size:12px}.price-wrap{gap:7px}.price{font-size:50px}.price-arrow{display:none}.material-carousel-stage{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}.material-arrow{width:34px;height:34px;font-size:27px}.material-slide img{height:auto}.material-video-box{padding:18px}
+      .container{
+        width:min(calc(100% - 28px),var(--max))
+      }
+
+      .hero{padding:55px 0}
+
+      .hero p{font-size:16px}
+
+      .visual{min-height:360px}
+
+      .mock-main{
+        width:80%;
+        left:7%;
+        top:10%
+      }
+
+      .mock-main .fake-video{height:165px}
+
+      .mock-mini{
+        width:60%;
+        right:4%;
+        bottom:7%
+      }
+
+      section{padding:65px 0}
+
+      .days,
+      .feature-grid,
+      .checklist,
+      .offer-list{
+        grid-template-columns:1fr
+      }
+
+      .review,
+      .result{
+        flex-basis:100%;
+        min-width:0
+      }
+
+      .offer-box{
+        padding:32px 18px!important;
+        border-radius:24px
+      }
+
+      .price{
+        font-size:46px;
+        letter-spacing:-.04em
+      }
+
+      .carousel-stage{
+        grid-template-columns:34px minmax(0,1fr) 34px;
+        gap:5px
+      }
+
+      .slider-side{
+        width:34px;
+        height:34px;
+        font-size:28px
+      }
+
+      .nav-cta{
+        padding:10px 14px;
+        font-size:12px
+      }
+
+      .price-wrap{gap:5px 8px}
+
+      .price-arrow{display:none}
+
+      .price-old{font-size:13px}
+
+      .price small{font-size:12px}
+
+      .discount-badge{
+        font-size:10px;
+        padding:9px 12px
+      }
+
+      .offer-list{
+        grid-template-columns:1fr!important;
+        text-align:left
+      }
+
+      .offer .btn-primary{
+        font-size:14px!important;
+        padding:16px 14px!important
+      }
+
+      .material-carousel-stage{
+        grid-template-columns:34px minmax(0,1fr) 34px;
+        gap:6px
+      }
+
+      .material-arrow{
+        width:34px;
+        height:34px;
+        font-size:27px
+      }
+
+      .material-slide img{height:auto}
+
+      .material-video-box{padding:18px}
+
+      .offer-kicker-row{
+        gap:7px;
+        margin-top:20px
+      }
+
+      .offer-kicker,
+      .offer-timer{
+        font-size:10px;
+        letter-spacing:.045em
+      }
+
+      .quiz-wrap{
+        width:calc(100% - 20px);
+        padding:4px 0 4px
+      }
+
+      #quizOverlay .quiz-screen{
+        min-height:calc(100dvh - 8px)
+      }
+
+      #quizOverlay .quiz-headline{
+        font-size:27px;
+        line-height:1.02;
+        margin-bottom:7px
+      }
+
+      #quizOverlay .quiz-sub{
+        font-size:13px;
+        line-height:1.25
+      }
+
+      #quizOverlay .quiz-question{
+        margin:14px auto 9px;
+        font-size:22px;
+        line-height:1.06
+      }
+
+      #quizOverlay .quiz-options{gap:6px}
+
+      #quizOverlay .quiz-option{
+        padding:10px 10px;
+        font-size:13px;
+        line-height:1.15
+      }
+
+      #quizOverlay .quiz-image-grid{
+        gap:7px;
+        margin-top:7px
+      }
+
+      #quizOverlay .quiz-image-label{
+        font-size:9px;
+        min-height:34px;
+        padding:5px
+      }
+
+      #quizOverlay .quiz-note{margin-top:8px}
+
+      #quizOverlay .quiz-note p{font-size:9px}
     }
-  
-/* ===== QUIZ DE ENTRADA ===== */
-#quizOverlay{
-  position:fixed;inset:0;z-index:99999;overflow-y:auto;
-  background:#fff;color:#181817;
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  opacity:1;visibility:visible;transition:opacity .35s ease,visibility .35s ease;
-}
-#quizOverlay.quiz-hidden{opacity:0;visibility:hidden;pointer-events:none}
-.quiz-wrap{
-  width:min(720px,calc(100% - 32px));min-height:100vh;margin:auto;
-  display:flex;align-items:flex-start;justify-content:center;padding:52px 0 60px;
-}
-.quiz-screen{width:100%;text-align:center;display:none;animation:quizIn .28s ease}
-.quiz-screen.active{display:block}
-@keyframes quizIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.quiz-headline{
-  margin:0 auto 13px;max-width:690px;color:#181817;
-  font-size:clamp(29px,5vw,45px);line-height:1.08;letter-spacing:-.035em;font-weight:900;
-}
-.quiz-sub{margin:0 auto;max-width:650px;color:#6e6b68;font-size:16px;line-height:1.55;font-weight:500}
-.quiz-sub strong{font-weight:900;color:#181817}
-.quiz-question{
-  margin:36px auto 22px;max-width:680px;color:#181817;
-  font-size:clamp(25px,4vw,34px);line-height:1.15;letter-spacing:-.025em;font-weight:900;
-}
-.quiz-options{width:min(540px,100%);margin:0 auto;display:flex;flex-direction:column;gap:11px}
-.quiz-option{
-  width:100%;border:1px solid #e2ddd8;background:#fff;color:#292725;border-radius:13px;
-  padding:16px 18px;min-height:56px;font:inherit;font-size:15px;line-height:1.35;font-weight:750;
-  cursor:pointer;box-shadow:0 4px 15px rgba(35,25,20,.05);
-  transition:transform .16s ease,border-color .16s ease,background .16s ease,box-shadow .16s ease;
-}
-.quiz-option:hover{transform:translateY(-1px);border-color:#ef6f61;box-shadow:0 8px 22px rgba(239,111,97,.12)}
-.quiz-option:active{transform:scale(.99)}
-.quiz-option.selected{background:#ef6f61;color:#fff;border-color:#ef6f61}
-.quiz-progress{width:min(540px,100%);height:5px;margin:0 auto 27px;border-radius:999px;background:#f0ece9;overflow:hidden}
-.quiz-progress-bar{height:100%;width:20%;border-radius:inherit;background:#ef6f61;transition:width .25s ease}
-.quiz-image-grid{
-  width:min(600px,100%);margin:22px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:14px;
-}
-.quiz-image-choice{border:0;padding:0;background:transparent;cursor:pointer;text-align:center}
-.quiz-image{
-  display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:15px;
-  border:2px solid #e2ddd8;background:#f4f1ef;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease;
-}
-.quiz-image-choice:hover .quiz-image{transform:translateY(-2px);border-color:#ef6f61;box-shadow:0 10px 24px rgba(239,111,97,.15)}
-.quiz-image-label{
-  display:flex;align-items:center;justify-content:center;min-height:52px;margin-top:8px;padding:9px 10px;
-  border-radius:11px;background:#ef6f61;color:#fff;font-size:13px;line-height:1.25;font-weight:850;
-}
-.quiz-note{
-  width:min(540px,100%);margin:23px auto 0;padding:15px 17px;border-radius:13px;
-  background:#fff5f2;border:1px solid #ffd9d3;text-align:left;
-}
-.quiz-note-title{margin:0 0 5px;color:#d95649;font-size:14px;font-weight:900}
-.quiz-note p{margin:0;color:#6e6b68;font-size:12px;line-height:1.5}
-.quiz-continue{
-  display:inline-flex;align-items:center;justify-content:center;min-width:190px;margin-top:25px;
-  padding:15px 24px;border:0;border-radius:13px;background:#ef6f61;color:#fff;font:inherit;
-  font-size:14px;font-weight:900;cursor:pointer;box-shadow:0 10px 25px rgba(239,111,97,.2);
-}
-.quiz-final-options{width:min(540px,100%);margin:25px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.quiz-helper{margin:0 auto 4px;color:#6e6b68;font-size:14px;font-weight:600}
-body.quiz-open{overflow:hidden}
-@media(max-width:560px){
-  .quiz-wrap{width:min(100% - 22px,720px);padding:34px 0 42px}
-  .quiz-headline{font-size:31px}.quiz-sub{font-size:14px}
-  .quiz-question{margin-top:29px;font-size:25px}.quiz-option{font-size:14px;padding:14px 13px}
-  .quiz-image-grid{gap:9px}.quiz-image-label{font-size:11px;min-height:49px;padding:7px}
-}
 
+    @media(max-width:340px){
+      .offer-kicker,
+      .offer-timer{
+        font-size:9px;
+        letter-spacing:.025em
+      }
 
-/* ===== AJUSTE FINAL: OFERTA RESPONSIVA + QUIZ COM ROLAGEM ===== */
-.offer-box{
-  box-sizing:border-box;
-  width:min(760px,100%);
-  max-width:100%;
-  margin:0 auto;
-  text-align:center;
-  overflow:hidden;
-}
-.offer-kicker-row{
-  width:100%;
-  box-sizing:border-box;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-wrap:nowrap;
-  gap:10px;
-  margin:22px auto 18px;
-  text-align:center;
-}
-.offer-kicker{
-  flex:1 1 auto;
-  min-width:0;
-  font-size:12px;
-  line-height:1.25;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.06em;
-  color:var(--primary-dark);
-}
-.offer-timer{
-  flex:0 0 auto;
-  font-size:12px;
-  line-height:1.25;
-  font-weight:900;
-  letter-spacing:.06em;
-  color:var(--primary-dark);
-  font-variant-numeric:tabular-nums;
-  white-space:nowrap;
-}
-.price-wrap{
-  width:100%;
-  box-sizing:border-box;
-  display:flex;
-  align-items:baseline;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:8px 12px;
-  margin:4px auto 12px;
-  text-align:center;
-}
-.price{
-  max-width:100%;
-  font-size:clamp(42px,7vw,62px);
-  line-height:1.05;
-  font-weight:950;
-  letter-spacing:-.045em;
-  margin:0;
-  color:var(--primary-dark);
-  white-space:nowrap;
-}
-.price small{
-  display:inline-block;
-  white-space:nowrap;
-  font-size:clamp(12px,2vw,14px);
-  line-height:1;
-  font-weight:850;
-  letter-spacing:0;
-  color:#6b625e;
-}
-.price-old,.price-arrow{flex:0 0 auto}
-.discount-badge{
-  width:fit-content;
-  max-width:100%;
-  box-sizing:border-box;
-  margin:10px auto 18px;
-  padding:10px 16px;
-  line-height:1.3;
-  text-align:center;
-  white-space:normal;
-}
-.offer-value{max-width:520px;width:100%;box-sizing:border-box;margin:0 auto 4px;line-height:1.5}
-.offer-list{width:100%;box-sizing:border-box}
-.offer .btn-primary{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%!important;max-width:100%;white-space:normal;text-align:center;line-height:1.25}
-.guarantee{max-width:100%;line-height:1.5}
+      .price{font-size:41px}
 
-/* O quiz começa no topo e o próprio quiz pode ser rolado até o fim. */
-#quizOverlay{
-  position:fixed;
-  inset:0;
-  overflow-x:hidden;
-  overflow-y:auto;
-  -webkit-overflow-scrolling:touch;
-}
-.quiz-wrap{
-  width:min(720px,calc(100% - 32px));
-  min-height:0;
-  margin:0 auto;
-  padding:24px 0 60px;
-  display:block;
-}
-.quiz-screen{width:100%;box-sizing:border-box}
-body.quiz-open{overflow:hidden}
+      .price small{font-size:11px}
+    }
 
-@media(max-width:560px){
-  .offer-box{padding:32px 18px!important;border-radius:24px}
-  .offer-kicker-row{gap:7px;margin-top:20px}
-  .offer-kicker,.offer-timer{font-size:10px;letter-spacing:.045em}
-  .price-wrap{gap:5px 8px}
-  .price-old{font-size:13px}
-  .price-arrow{display:none}
-  .price{font-size:46px;letter-spacing:-.04em}
-  .price small{font-size:12px}
-  .discount-badge{font-size:10px;padding:9px 12px}
-  .offer-list{grid-template-columns:1fr!important;text-align:left}
-  .offer .btn-primary{font-size:14px!important;padding:16px 14px!important}
-  .quiz-wrap{width:calc(100% - 22px);padding:18px 0 48px}
-}
+    @media(max-width:560px) and (max-height:720px){
+      #quizOverlay .quiz-headline{font-size:24px}
 
-@media(max-width:340px){
-  .offer-kicker,.offer-timer{font-size:9px;letter-spacing:.025em}
-  .price{font-size:41px}
-  .price small{font-size:11px}
-}
+      #quizOverlay .quiz-question{
+        margin-top:10px;
+        font-size:20px
+      }
 
+      #quizOverlay .quiz-option{
+        padding:8px 9px;
+        font-size:12px
+      }
 
-/* ===== CORREÇÃO FINAL: QUIZ COMPACTO + CARROSSÉIS SEM ESTOURO ===== */
-#quizOverlay{
-  position:fixed !important;
-  top:0 !important;right:0 !important;bottom:0 !important;left:0 !important;
-  overflow:hidden !important;
-  padding:0 !important;
-}
-#quizOverlay .quiz-wrap{
-  width:min(720px,calc(100% - 24px));
-  height:100dvh;
-  min-height:0;
-  margin:0 auto;
-  padding:8px 0 8px !important;
-  display:block;
-}
-#quizOverlay .quiz-screen{
-  width:100%;
-  min-height:calc(100dvh - 16px);
-  box-sizing:border-box;
-  overflow:hidden;
-  display:none;
-  text-align:center;
-}
-#quizOverlay .quiz-screen.active{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
-#quizOverlay .quiz-headline{
-  margin:0 auto 8px;
-  font-size:clamp(27px,5vw,45px);
-  line-height:1.04;
-}
-#quizOverlay .quiz-sub{font-size:14px;line-height:1.3}
-#quizOverlay .quiz-question{
-  margin:20px auto 12px;
-  font-size:clamp(22px,4vw,34px);
-  line-height:1.08;
-}
-#quizOverlay .quiz-options{gap:7px;width:min(540px,100%)}
-#quizOverlay .quiz-option{
-  min-height:0;
-  padding:11px 12px;
-  font-size:14px;
-  line-height:1.2;
-  border-radius:12px;
-}
-#quizOverlay .quiz-progress{margin-bottom:10px;height:4px}
-#quizOverlay .quiz-helper{font-size:12px;margin-bottom:0}
-#quizOverlay .quiz-image-grid{
-  width:min(560px,100%);
-  margin:10px auto 0;
-  gap:8px;
-}
-#quizOverlay .quiz-image{aspect-ratio:1/1;object-fit:cover;border-radius:12px}
-#quizOverlay .quiz-image-label{min-height:38px;margin-top:5px;padding:6px 7px;font-size:10px;line-height:1.15;border-radius:9px}
-#quizOverlay .quiz-note{margin:10px auto 0;padding:10px 12px}
-#quizOverlay .quiz-note-title{font-size:12px;margin-bottom:3px}
-#quizOverlay .quiz-note p{font-size:10px;line-height:1.3}
-#quizOverlay .quiz-continue{margin-top:14px;padding:12px 22px;min-height:44px}
-#quizOverlay .quiz-final-options{margin-top:14px;gap:8px}
-
-/* Os controles nunca conseguem levar o carrossel além do último item. */
-.carousel,.material-carousel{
-  overscroll-behavior-x:contain;
-  scroll-snap-stop:always;
-}
-.slider-side:disabled,.material-arrow:disabled{
-  opacity:.35;
-  cursor:default;
-  transform:none !important;
-  box-shadow:none;
-}
-
-@media(max-width:560px){
-  #quizOverlay .quiz-wrap{width:calc(100% - 20px);padding:4px 0 4px !important}
-  #quizOverlay .quiz-screen{min-height:calc(100dvh - 8px)}
-  #quizOverlay .quiz-headline{font-size:27px;line-height:1.02;margin-bottom:7px}
-  #quizOverlay .quiz-sub{font-size:13px;line-height:1.25}
-  #quizOverlay .quiz-question{margin:14px auto 9px;font-size:22px;line-height:1.06}
-  #quizOverlay .quiz-options{gap:6px}
-  #quizOverlay .quiz-option{padding:10px 10px;font-size:13px;line-height:1.15}
-  #quizOverlay .quiz-image-grid{gap:7px;margin-top:7px}
-  #quizOverlay .quiz-image-label{font-size:9px;min-height:34px;padding:5px}
-  #quizOverlay .quiz-note{margin-top:8px}
-  #quizOverlay .quiz-note p{font-size:9px}
-}
-
-@media(max-width:560px) and (max-height:720px){
-  #quizOverlay .quiz-headline{font-size:24px}
-  #quizOverlay .quiz-question{margin-top:10px;font-size:20px}
-  #quizOverlay .quiz-option{padding:8px 9px;font-size:12px}
-  #quizOverlay .quiz-image-label{font-size:8px;min-height:30px}
-}
-</style>
+      #quizOverlay .quiz-image-label{
+        font-size:8px;
+        min-height:30px
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <!-- ===== QUIZ INTERATIVO DE ENTRADA ===== -->
@@ -604,7 +1534,9 @@ body.quiz-open{overflow:hidden}
       <h1 class="quiz-headline">Descubra como este método número 1 pode funcionar rapidamente pra você.</h1>
       <p class="quiz-sub">9 em cada 10 pessoas não esperam para verem o final.</p>
       <p class="quiz-sub" style="margin-top:8px">Duração do teste: <strong>1 minuto</strong></p>
+
       <h2 class="quiz-question">Quantos anos você tem? 🤔</h2>
+
       <div class="quiz-options">
         <button class="quiz-option" type="button">Menos de 30 anos</button>
         <button class="quiz-option" type="button">30-39</button>
@@ -614,38 +1546,49 @@ body.quiz-open{overflow:hidden}
       </div>
     </section>
 
-   <section class="quiz-screen" data-screen="2">
-  <div class="quiz-progress"><div class="quiz-progress-bar" style="width:40%"></div></div>
-  <p class="quiz-helper">Duração do teste: <strong>1 minuto</strong></p>
+    <section class="quiz-screen" data-screen="2">
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" style="width:40%"></div>
+      </div>
 
-  <h2 class="quiz-question">Qual parte do seu corpo mais te incomoda por causa da gordura? 🤷‍♀️</h2>
+      <p class="quiz-helper">Duração do teste: <strong>1 minuto</strong></p>
 
-  <div class="quiz-options">
-    <button class="quiz-option" type="button">Barriga e cintura, principalmente a gordura abdominal.</button>
-    <button class="quiz-option" type="button">Braços e costas, onde sinto que acumula muita gordura.</button>
-    <button class="quiz-option" type="button">Pernas e coxas, principalmente a gordura localizada.</button>
-    <button class="quiz-option" type="button">Quadril e bumbum, que parecem maiores do que eu gostaria.</button>
-    <button class="quiz-option" type="button">Sinto que tenho gordura acumulada em várias partes do corpo.</button>
-  </div>
-</section>
+      <h2 class="quiz-question">Qual parte do seu corpo mais te incomoda por causa da gordura? 🤷‍♀️</h2>
+
+      <div class="quiz-options">
+        <button class="quiz-option" type="button">Barriga e cintura, principalmente a gordura abdominal.</button>
+        <button class="quiz-option" type="button">Braços e costas, onde sinto que acumula muita gordura.</button>
+        <button class="quiz-option" type="button">Pernas e coxas, principalmente a gordura localizada.</button>
+        <button class="quiz-option" type="button">Quadril e bumbum, que parecem maiores do que eu gostaria.</button>
+        <button class="quiz-option" type="button">Sinto que tenho gordura acumulada em várias partes do corpo.</button>
+      </div>
+    </section>
 
     <section class="quiz-screen" data-screen="3">
-      <div class="quiz-progress"><div class="quiz-progress-bar" style="width:60%"></div></div>
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" style="width:60%"></div>
+      </div>
+
       <h2 class="quiz-question">Qual o tipo de gordura abdominal é mais parecido com o seu?</h2>
+
       <p class="quiz-sub">Por favor, selecione uma opção:</p>
+
       <div class="quiz-image-grid">
         <button class="quiz-image-choice" type="button">
           <img class="quiz-image" src="gordura1.jpg" alt="Bolsa na parte inferior da barriga">
           <span class="quiz-image-label">Bolsa na parte inferior da barriga</span>
         </button>
+
         <button class="quiz-image-choice" type="button">
           <img class="quiz-image" src="gordura2.jpg" alt="Barriga redonda">
           <span class="quiz-image-label">Barriga redonda</span>
         </button>
+
         <button class="quiz-image-choice" type="button">
           <img class="quiz-image" src="gordura3.jpg" alt="Gorduras na barriga">
           <span class="quiz-image-label">Gorduras na barriga</span>
         </button>
+
         <button class="quiz-image-choice" type="button">
           <img class="quiz-image" src="gordura4.jpg" alt="Reduzir a gordura abdominal solta">
           <span class="quiz-image-label">Reduzir a gordura abdominal solta</span>
@@ -654,14 +1597,19 @@ body.quiz-open{overflow:hidden}
     </section>
 
     <section class="quiz-screen" data-screen="4">
-      <div class="quiz-progress"><div class="quiz-progress-bar" style="width:80%"></div></div>
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" style="width:80%"></div>
+      </div>
+
       <h2 class="quiz-question">Você está atualmente em um estado de alto nível estrogênio?</h2>
+
       <div class="quiz-options">
         <button class="quiz-option" type="button">🙅‍♀️ Não.</button>
         <button class="quiz-option" type="button">🤰 Gravidez.</button>
         <button class="quiz-option" type="button">💊 Sobre a pílula anticoncepcional.</button>
         <button class="quiz-option" type="button">🌸 Sobre a TRH (Terapia Hormonal na Menopausa).</button>
       </div>
+
       <div class="quiz-note">
         <h3 class="quiz-note-title">Por que perguntamos?</h3>
         <p>Quando os níveis de estrogênio diminuem, o corpo tende a armazenar mais gordura.</p>
@@ -670,12 +1618,17 @@ body.quiz-open{overflow:hidden}
 
     <section class="quiz-screen" data-screen="5">
       <h2 class="quiz-headline">Parabéns, você pode ser a pessoa ideal! ✅</h2>
-      <p class="quiz-sub">Projeto Verão é 100% prático e de fácil reprodução em casa, treinos para todo tipo de corpo!</p>
+
+      <p class="quiz-sub">
+        Projeto Verão é 100% prático e de fácil reprodução em casa, treinos para todo tipo de corpo!
+      </p>
+
       <button class="quiz-continue" type="button">Continuar</button>
     </section>
 
     <section class="quiz-screen" data-screen="6">
       <h2 class="quiz-headline">Se eu liberar uma super promoção, você topa mudar sua autoestima?</h2>
+
       <div class="quiz-final-options">
         <button class="quiz-option" type="button" data-finish="true">Sim</button>
         <button class="quiz-option" type="button" data-finish="true">Claro</button>
@@ -685,458 +1638,962 @@ body.quiz-open{overflow:hidden}
   </div>
 </div>
 
+<div class="topbar">OFERTA VÁLIDA SOMENTE ATÉ HOJE</div>
 
-  <div class="topbar">OFERTA VÁLIDA SOMENTE ATÉ HOJE</div>
+<nav>
+  <div class="container nav-inner">
+    <a class="brand" href="#">Projeto <span>Verão</span> em Casa</a>
 
-  <nav>
-    <div class="container nav-inner">
-      <a class="brand" href="#">Projeto <span>Verão</span> em Casa</a>
-      <div class="nav-links">
-        <a href="#receba">O que você recebe</a>
-        <a href="#depoimentos">Avaliações</a>
-        <a href="#oferta">Oferta</a>
-        <a href="#faq">Dúvidas</a>
-      </div>
-      <a class="nav-cta" href="#oferta">Quero começar</a>
+    <div class="nav-links">
+      <a href="#receba">O que você recebe</a>
+      <a href="#depoimentos">Avaliações</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#faq">Dúvidas</a>
     </div>
-  </nav>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="eyebrow">✨ Seu treino, no seu espaço</div>
+    <a class="nav-cta" href="#oferta">Quero começar</a>
+  </div>
+</nav>
 
-          <h1>Seu projeto de treino pode começar <em>em casa.</em></h1>
+<main>
 
-          <!--
-            VÍDEO LOCAL:
-            1. Crie uma pasta chamada "videos" na raiz do projeto.
-            2. Coloque seu vídeo dentro dela com o nome "video-projeto-verao.mp4".
-            3. Para trocar a thumbnail, coloque uma imagem em "videos/thumb.jpg".
-            4. Altere poster="videos/thumb.jpg" se usar outro nome.
-          -->
-          <div class="hero-video">
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">✨ Seu treino, no seu espaço</div>
+
+        <h1>Seu projeto de treino pode começar <em>em casa.</em></h1>
+
+        <div class="hero-video">
+          <video
+            controls
+            playsinline
+            preload="metadata"
+            poster="thumb.jpg"
+          >
+            <source src="videoprojetoverao.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeos.
+          </video>
+        </div>
+
+        <p>
+          Um programa de 6 dias com videoaulas, exercícios ilustrados e materiais de apoio
+          para você se movimentar sem precisar pagar academia.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#oferta">
+            Quero o Projeto Verão em Casa →
+          </a>
+        </div>
+
+        <div class="trust">
+          <span>✓ Acesso digital</span>
+          <span>✓ 6 dias de treino</span>
+          <span>✓ Treine no seu ritmo</span>
+        </div>
+
+        <!-- ===== NOVO BLOCO ANTES E DEPOIS ===== -->
+        <div class="hero-before-after">
+          <h2>ANTES E DEPOIS:</h2>
+          <img
+            src="antesedepois.jpg"
+            alt="Antes e depois do Projeto Verão em Casa"
+          >
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== O QUE VOCÊ RECEBE ===== -->
+  <section id="receba">
+    <div class="container">
+
+      <div class="section-head receive-head">
+        <div class="kicker">O QUE VOCÊ VAI RECEBER?</div>
+        <h2>Um plano completo para treinar em casa, sem complicação.</h2>
+        <p>
+          Todo o conteúdo fica organizado em 6 pastas no Google Drive, uma para cada dia.
+        </p>
+      </div>
+
+      <div class="days">
+        <article class="day">
+          <div class="day-num">DIA 01</div>
+          <h3>Rotina de exercícios básicos</h3>
+          <p>Uma videoaula para começar trabalhando movimentos fundamentais e criar sua rotina.</p>
+        </article>
+
+        <article class="day">
+          <div class="day-num">DIA 02</div>
+          <h3>Exercícios aeróbicos</h3>
+          <p>Uma sessão dinâmica para colocar o corpo em movimento dentro de casa.</p>
+        </article>
+
+        <article class="day">
+          <div class="day-num">DIA 03</div>
+          <h3>Queima de 500 calorias</h3>
+          <p>Treino focado em movimentação e gasto energético, respeitando seu próprio ritmo.</p>
+        </article>
+
+        <article class="day">
+          <div class="day-num">DIA 04</div>
+          <h3>Barriga + bumbum</h3>
+          <p>Sequência com foco em abdômen e glúteos, com orientação em vídeo.</p>
+        </article>
+
+        <article class="day">
+          <div class="day-num">DIA 05</div>
+          <h3>Tonificar o corpo</h3>
+          <p>Uma rotina para trabalhar diferentes regiões do corpo em uma única sessão.</p>
+        </article>
+
+        <article class="day">
+          <div class="day-num">DIA 06</div>
+          <h3>Queima de 1000 calorias</h3>
+          <p>Uma sessão mais longa e intensa. Faça adaptações conforme seu condicionamento.</p>
+        </article>
+      </div>
+
+      <div class="material-preview">
+
+        <div class="section-head material-head">
+          <div class="kicker">Por dentro do material</div>
+          <h2>Veja um pouco do material.</h2>
+          <p>
+            Confira uma prévia das ilustrações e de uma aula do Projeto Verão em Casa.
+          </p>
+        </div>
+
+        <div class="material-carousel-stage">
+
+          <button
+            class="material-arrow"
+            type="button"
+            data-material-dir="-1"
+            aria-label="Ilustração anterior"
+          >‹</button>
+
+          <div class="material-carousel" id="materialCarousel">
+
+            <div class="material-slide">
+              <img src="ilustracao1.jpg" alt="Ilustração de exercício">
+            </div>
+
+            <div class="material-slide">
+              <img src="ilustracao2.jpg" alt="Ilustração de exercício">
+            </div>
+
+            <div class="material-slide">
+              <img src="ilustracao3.jpg" alt="Ilustração de exercício">
+            </div>
+
+          </div>
+
+          <button
+            class="material-arrow"
+            type="button"
+            data-material-dir="1"
+            aria-label="Próxima ilustração"
+          >›</button>
+
+        </div>
+
+        <div class="material-video-box">
+
+          <div class="material-video-title">
+            <span>🎥</span>
+
+            <div>
+              <strong>Um pedacinho da videoaula</strong>
+              <p>Veja como são os treinos por dentro.</p>
+            </div>
+          </div>
+
+          <div class="material-video">
             <video
               controls
               playsinline
               preload="metadata"
-              poster="thumb.jpg"
+              poster="material-video-thumb.jpg"
             >
-              <source src="videoprojetoverao.mp4" type="video/mp4">
+              <source src="video-aula-preview.mp4" type="video/mp4">
               Seu navegador não suporta a reprodução de vídeos.
             </video>
           </div>
 
-          <p>
-            Um programa de 6 dias com videoaulas, exercícios ilustrados e materiais de apoio
-            para você se movimentar sem precisar pagar academia.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#oferta">Quero o Projeto Verão em Casa →</a>
-          </div>
-
-          <div class="trust">
-            <span>✓ Acesso digital</span>
-            <span>✓ 6 dias de treino</span>
-            <span>✓ Treine no seu ritmo</span>
-          </div>
         </div>
       </div>
-    </section>
 
-    <section id="receba">
-      <div class="container">
-        <div class="section-head receive-head">
-          <div class="kicker">O QUE VOCÊ VAI RECEBER?</div>
-          <h2>Um plano completo para treinar em casa, sem complicação.</h2>
-          <p>Todo o conteúdo fica organizado em 6 pastas no Google Drive, uma para cada dia.</p>
-        </div>
+    </div>
+  </section>
 
-        <div class="days">
-          <article class="day"><div class="day-num">DIA 01</div><h3>Rotina de exercícios básicos</h3><p>Uma videoaula para começar trabalhando movimentos fundamentais e criar sua rotina.</p></article>
-          <article class="day"><div class="day-num">DIA 02</div><h3>Exercícios aeróbicos</h3><p>Uma sessão dinâmica para colocar o corpo em movimento dentro de casa.</p></article>
-          <article class="day"><div class="day-num">DIA 03</div><h3>Queima de 500 calorias</h3><p>Treino focado em movimentação e gasto energético, respeitando seu próprio ritmo.</p></article>
-          <article class="day"><div class="day-num">DIA 04</div><h3>Barriga + bumbum</h3><p>Sequência com foco em abdômen e glúteos, com orientação em vídeo.</p></article>
-          <article class="day"><div class="day-num">DIA 05</div><h3>Tonificar o corpo</h3><p>Uma rotina para trabalhar diferentes regiões do corpo em uma única sessão.</p></article>
-          <article class="day"><div class="day-num">DIA 06</div><h3>Queima de 1000 calorias</h3><p>Uma sessão mais longa e intensa. Faça adaptações conforme seu condicionamento.</p></article>
-        </div>
+  <!-- ===== POR QUE EM CASA ===== -->
+  <section class="band">
+    <div class="container">
 
-        <div class="material-preview">
-          <div class="section-head material-head">
-            <div class="kicker">Por dentro do material</div>
-            <h2>Veja um pouco do material.</h2>
-            <p>Confira uma prévia das ilustrações e de uma aula do Projeto Verão em Casa.</p>
-          </div>
-          <div class="material-carousel-stage">
-            <button class="material-arrow" type="button" data-material-dir="-1" aria-label="Ilustração anterior">‹</button>
-            <div class="material-carousel" id="materialCarousel">
-              <div class="material-slide"><img src="ilustracao1.jpg" alt="Ilustração de exercício"></div>
-              <div class="material-slide"><img src="ilustracao2.jpg" alt="Ilustração de exercício"></div>
-              <div class="material-slide"><img src="ilustracao3.jpg" alt="Ilustração de exercício"></div>
-            </div>
-            <button class="material-arrow" type="button" data-material-dir="1" aria-label="Próxima ilustração">›</button>
-          </div>
-          <div class="material-video-box">
-            <div class="material-video-title"><span>🎥</span><div><strong>Um pedacinho da videoaula</strong><p>Veja como são os treinos por dentro.</p></div></div>
-            <div class="material-video">
-              <video controls playsinline preload="metadata" poster="material-video-thumb.jpg">
-                <source src="video-aula-preview.mp4" type="video/mp4">
+      <div class="section-head">
+        <div class="kicker">Por que em casa?</div>
+        <h2>Menos barreiras para começar.</h2>
+        <p>
+          Você não precisa encaixar uma academia na sua rotina para dar o primeiro passo.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+
+        <article class="feature">
+          <div class="feature-icon">🏠</div>
+          <h3>Seu espaço</h3>
+          <p>
+            Treine no conforto da sua casa, sem deslocamento e sem mensalidade de academia.
+          </p>
+        </article>
+
+        <article class="feature">
+          <div class="feature-icon">🕐</div>
+          <h3>Seu horário</h3>
+          <p>
+            Escolha um momento que funcione para a sua rotina e acompanhe as aulas pelo celular ou computador.
+          </p>
+        </article>
+
+        <article class="feature">
+          <div class="feature-icon">📂</div>
+          <h3>Tudo organizado</h3>
+          <p>
+            Os seis dias ficam separados em pastas para você saber exatamente qual conteúdo acessar.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section id="depoimentos">
+    <div class="container">
+
+      <div class="section-head">
+        <div class="kicker">Avaliações em vídeo</div>
+        <h2>Veja o que nossas clientes estão falando.</h2>
+        <p>
+          Assista aos depoimentos em vídeo e conheça a experiência de quem já fez o Projeto Verão.
+        </p>
+      </div>
+
+      <div class="carousel-stage video-review-stage">
+
+        <button
+          class="slider-side slider-side-left"
+          data-target="videoReviews"
+          data-dir="-1"
+          aria-label="Ver avaliação em vídeo anterior"
+        >‹</button>
+
+        <div class="carousel video-review-carousel" id="videoReviews" tabindex="0">
+
+          <article class="video-review">
+            <div class="video-review-media">
+              <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="thumbfalada1.jpg"
+              >
+                <source src="videofalado1.mp4" type="video/mp4">
                 Seu navegador não suporta a reprodução de vídeos.
               </video>
             </div>
-          </div>
+
+            <div class="video-review-info">
+              <div class="stars">★★★★★</div>
+              <strong>Alice Santos</strong>
+            </div>
+          </article>
+
+          <article class="video-review">
+            <div class="video-review-media">
+              <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="thumbfalada2.jpg"
+              >
+                <source src="videofalado2.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+              </video>
+            </div>
+
+            <div class="video-review-info">
+              <div class="stars">★★★★★</div>
+              <strong>Thayna Cardoso</strong>
+            </div>
+          </article>
+
+          <article class="video-review">
+            <div class="video-review-media">
+              <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="thumbfalada3.jpg"
+              >
+                <source src="videofalado3.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+              </video>
+            </div>
+
+            <div class="video-review-info">
+              <div class="stars">★★★★★</div>
+              <strong>Julia Pedroso</strong>
+            </div>
+          </article>
+
         </div>
+
+        <button
+          class="slider-side slider-side-right"
+          data-target="videoReviews"
+          data-dir="1"
+          aria-label="Ver próxima avaliação em vídeo"
+        >›</button>
+
       </div>
-    </section>
-
-    <section class="band">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Por que em casa?</div>
-          <h2>Menos barreiras para começar.</h2>
-          <p>Você não precisa encaixar uma academia na sua rotina para dar o primeiro passo.</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature"><div class="feature-icon">🏠</div><h3>Seu espaço</h3><p>Treine no conforto da sua casa, sem deslocamento e sem mensalidade de academia.</p></article>
-          <article class="feature"><div class="feature-icon">🕐</div><h3>Seu horário</h3><p>Escolha um momento que funcione para a sua rotina e acompanhe as aulas pelo celular ou computador.</p></article>
-          <article class="feature"><div class="feature-icon">📂</div><h3>Tudo organizado</h3><p>Os seis dias ficam separados em pastas para você saber exatamente qual conteúdo acessar.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="depoimentos">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Avaliações em vídeo</div>
-          <h2>Veja o que nossas clientes estão falando.</h2>
-          <p>Assista aos depoimentos em vídeo e conheça a experiência de quem já fez o Projeto Verão.</p>
-        </div>
-
-        <div class="carousel-stage video-review-stage">
-          <button class="slider-side slider-side-left" data-target="videoReviews" data-dir="-1" aria-label="Ver avaliação em vídeo anterior">‹</button>
-          <div class="carousel video-review-carousel" id="videoReviews" tabindex="0">
-            <article class="video-review">
-              <div class="video-review-media">
-                <video controls playsinline preload="metadata" poster="thumbfalada1.jpg">
-                  <source src="videofalado1.mp4" type="video/mp4">
-                  Seu navegador não suporta a reprodução de vídeos.
-                </video>
-              </div>
-              <div class="video-review-info"><div class="stars">★★★★★</div><strong>Alice Santos</strong></div>
-            </article>
-            <article class="video-review">
-              <div class="video-review-media">
-                <video controls playsinline preload="metadata" poster="thumbfalada2.jpg">
-                  <source src="videofalado2.mp4" type="video/mp4">
-                  Seu navegador não suporta a reprodução de vídeos.
-                </video>
-              </div>
-              <div class="video-review-info"><div class="stars">★★★★★</div><strong>Thayna Cardoso</strong></div>
-            </article>
-            <article class="video-review">
-              <div class="video-review-media">
-                <video controls playsinline preload="metadata" poster="thumbfalada3.jpg">
-                  <source src="videofalado3.mp4" type="video/mp4">
-                  Seu navegador não suporta a reprodução de vídeos.
-                </video>
-              </div>
-              <div class="video-review-info"><div class="stars">★★★★★</div><strong>Julia Pedroso</strong></div>
-            </article>
-          </div>
-          <button class="slider-side slider-side-right" data-target="videoReviews" data-dir="1" aria-label="Ver próxima avaliação em vídeo">›</button>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:20px">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Antes e depois</div>
-          <h2>Resultados reais merecem espaço de destaque.</h2>
-          <p>Use apenas fotos e relatos com autorização das clientes. Os cards abaixo são placeholders.</p>
-        </div>
-
-        <div class="carousel-stage">
-          <button class="slider-side slider-side-left" data-target="results" data-dir="-1" aria-label="Ver resultado anterior">‹</button>
-          <div class="carousel" id="results" tabindex="0">
-          <article class="result">
-            <div class="beforeafter"><div class="before"><img src="antes1.jpg" alt="Antes - cliente 1"></div><div class="after"><img src="depois1.jpg" alt="Depois - cliente 1"></div></div>
-            <strong>Cleide Moura</strong><br><small>2 meses de exercícios.</small>
-          </article>
-          <article class="result">
-            <div class="beforeafter"><div class="before"><img src="antes2.jpg" alt="Antes - cliente 2"></div><div class="after"><img src="depois2.jpg" alt="Depois - cliente 2"></div></div>
-            <strong>Nayara Castilho</strong><br><small>2 meses de exercicíos.</small>
-          </article>
-          <article class="result">
-            <div class="beforeafter"><div class="before"><img src="antes3.jpg" alt="Antes - cliente 3"></div><div class="after"><img src="depois3.jpg" alt="Depois - cliente 3"></div></div>
-            <strong>Mirella Castanheira</strong><br><small>1 mês de exercicíos.</small>
-          </article>
-          <article class="result">
-            <div class="beforeafter"><div class="before"><img src="antes4.jpg" alt="Antes - cliente 4"></div><div class="after"><img src="depois4.jpg" alt="Depois - cliente 4"></div></div>
-            <strong>Cliente 4</strong><br><small>Resultado de exercícios.</small>
-          </article>
-          <article class="result">
-            <div class="beforeafter"><div class="before"><img src="antes5.jpg" alt="Antes - cliente 5"></div><div class="after"><img src="depois5.jpg" alt="Depois - cliente 5"></div></div>
-            <strong>Cliente 5</strong><br><small>Resultado de exercícios.</small>
-          </article>
-          <article class="result">
-            <div class="beforeafter"><div class="before"><img src="antes6.jpg" alt="Antes - cliente 6"></div><div class="after"><img src="depois6.jpg" alt="Depois - cliente 6"></div></div>
-            <strong>Cliente 6</strong><br><small>Resultado de exercícios.</small>
-          </article>
-          <article class="result">
-            <div class="beforeafter"><div class="before"><img src="antes7.jpg" alt="Antes - cliente 7"></div><div class="after"><img src="depois7.jpg" alt="Depois - cliente 7"></div></div>
-            <strong>Cliente 7</strong><br><small>Resultado de exercícios.</small>
-          </article>
-          <article class="result">
-            <div class="beforeafter"><div class="before"><img src="antes8.jpg" alt="Antes - cliente 8"></div><div class="after"><img src="depois8.jpg" alt="Depois - cliente 8"></div></div>
-            <strong>Cliente 8</strong><br><small>Resultado de exercícios.</small>
-          </article>
-          <article class="result">
-            <div class="beforeafter"><div class="before"><img src="antes9.jpg" alt="Antes - cliente 9"></div><div class="after"><img src="depois9.jpg" alt="Depois - cliente 9"></div></div>
-            <strong>Cliente 9</strong><br><small>Resultado de exercícios.</small>
-          </article>
-          <article class="result">
-            <div class="beforeafter"><div class="before"><img src="antes10.jpg" alt="Antes - cliente 10"></div><div class="after"><img src="depois10.jpg" alt="Depois - cliente 10"></div></div>
-            <strong>Cliente 10</strong><br><small>Resultado de exercícios.</small>
-          </article>
-          </div>
-          <button class="slider-side slider-side-right" data-target="results" data-dir="1" aria-label="Ver próximo resultado">›</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="offer" id="oferta">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Oferta especial</div>
-          <h2>Comece o Projeto Verão em Casa.</h2>
-          <p>Um programa digital simples para você acessar de onde estiver.</p>
-        </div>
-        <div class="offer-box">
-          <div class="offer-kicker-row">
-            <div class="offer-kicker">Aproveite enquanto a oferta está disponível</div>
-            <div class="offer-timer" id="offerTimer" aria-label="Tempo restante da oferta">05:00</div>
-          </div>
-          <div class="price-wrap">
-            <span class="price-old">DE R$ 39,90</span>
-            <span class="price-arrow">→</span>
-            <div class="price">R$ 19,90 <small>pagamento único*</small></div>
-          </div>
-          <div class="discount-badge">🔥 PROMOÇÃO • 50% DE DESCONTO • PAGAMENTO ÚNICO 🔥</div>
-          <p class="offer-value">Você recebe o acesso ao conteúdo digital descrito nesta página, sem mensalidade.</p>
-          <div class="offer-list">
-            <div>✓ 6 dias de treino</div>
-            <div>✓ 6 pastas no Google Drive</div>
-            <div>✓ Videoaulas</div>
-            <div>✓ Exercícios ilustrados</div>
-            <div>✓ Material para consulta</div>
-            <div>✓ Acesso digital</div>
-          </div>
-          <!-- TROQUE O HREF ABAIXO PELO SEU LINK DE CHECKOUT -->
-          <a class="btn btn-primary" style="width:100%;padding:17px" href="https://pay.cakto.com.br/heygsp4_1157628">🔥 QUERO APROVEITAR A OFERTA →</a>
-          <div class="guarantee">🔒 Pagamento processado de forma segura • *Condições conforme seu checkout.</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">FAQ</div>
-          <h2>Perguntas frequentes</h2>
-        </div>
-        <div class="faq">
-          <details><summary>Como recebo o Projeto Verão em Casa?</summary><p>Após a confirmação do pagamento, o acesso deve ser entregue pelo seu sistema de checkout, conforme a configuração da sua oferta.</p></details>
-          <details><summary>Preciso ir à academia?</summary><p>Não. A proposta do produto é oferecer treinos para serem realizados em casa, seguindo as orientações disponíveis nas videoaulas e materiais.</p></details>
-          <details><summary>Quanto tempo duram os vídeos?</summary><p>Os vídeos dos seis dias têm durações diferentes, aproximadamente entre 10 e 59 minutos.</p></details>
-          <details><summary>O que existe dentro de cada pasta?</summary><p>Cada uma das seis pastas reúne os vídeos do respectivo dia e materiais de apoio com ilustrações, nomes dos exercícios, textos e dicas.</p></details>
-          <details><summary>Posso imprimir os exercícios?</summary><p>Sim. O material ilustrativo foi pensado também para ser consultado e, se você quiser, impresso.</p></details>
-          <details><summary>Sou iniciante. Posso fazer?</summary><p>O nível de condicionamento varia de pessoa para pessoa. Comece respeitando seus limites, adapte os movimentos quando necessário e interrompa o exercício se sentir dor ou mal-estar. Se tiver alguma condição de saúde ou dúvida sobre sua capacidade de se exercitar, procure orientação profissional.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section class="final">
-      <div class="container">
-        <div class="kicker">Seu próximo passo</div>
-        <h2>Seu espaço também pode ser o seu lugar de treino.</h2>
-        <p>Tenha os 6 dias organizados em um único produto e comece a criar uma rotina de movimento em casa.</p>
-        <a class="btn btn-primary" href="#oferta">Quero o Projeto Verão em Casa →</a>
-        <div class="disclaimer">Este produto é educacional e não substitui avaliação ou acompanhamento de profissionais de saúde e educação física. Resultados individuais podem variar.</div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      © 2026 Projeto Verão em Casa • Todos os direitos reservados.
     </div>
-  </footer>
+  </section>
 
-  <script>
-    function carouselItems(c){ return Array.from(c.children).filter(el=>el.offsetWidth>0); }
-    function carouselIndex(c){
-      const items=carouselItems(c);
-      if(!items.length) return 0;
-      let best=0,dist=Infinity;
-      items.forEach((item,i)=>{
-        const d=Math.abs(c.scrollLeft-item.offsetLeft);
-        if(d<dist){dist=d;best=i;}
-      });
-      return best;
-    }
-    function updateCarouselButtons(c){
-      const items=carouselItems(c), index=carouselIndex(c);
-      if(!items.length)return;
-      const left=c.parentElement?.querySelector('.slider-side-left');
-      const right=c.parentElement?.querySelector('.slider-side-right');
-      if(left) left.disabled=index<=0;
-      if(right) right.disabled=index>=items.length-1;
-    }
-    function moveCarousel(c,dir){
-      const items=carouselItems(c);
-      if(!items.length)return;
-      const index=carouselIndex(c);
-      const next=Math.max(0,Math.min(items.length-1,index+dir));
-      if(next===index){ updateCarouselButtons(c); return; }
-      c.scrollTo({left:items[next].offsetLeft,behavior:'smooth'});
-      setTimeout(()=>updateCarouselButtons(c),300);
-    }
+  <!-- ===== RESULTADOS ===== -->
+  <section style="padding-top:20px">
+    <div class="container">
 
-    // Depoimentos em vídeo: ao trocar de card, o vídeo anterior volta para a thumb e reinicia.
-    const reviewVideos = Array.from(document.querySelectorAll('#videoReviews video'));
-    function resetReviewVideo(video){
-      try {
-        video.pause();
-        video.currentTime = 0;
-        video.load();
-      } catch(e) {}
-    }
-    reviewVideos.forEach(video=>{
-      video.addEventListener('play',()=>{
-        reviewVideos.forEach(other=>{ if(other !== video) resetReviewVideo(other); });
-      });
-    });
-    const videoReviewsCarousel = document.getElementById('videoReviews');
-    if(videoReviewsCarousel){
-      let reviewScrollTimer;
-      videoReviewsCarousel.addEventListener('scroll',()=>{
-        clearTimeout(reviewScrollTimer);
-        reviewScrollTimer = setTimeout(()=>{
-          reviewVideos.forEach(resetReviewVideo);
-        }, 120);
-      }, {passive:true});
-    }
+      <div class="section-head">
+        <div class="kicker">Antes e depois</div>
+        <h2>Resultados reais merecem espaço de destaque.</h2>
+        <p>
+          Use apenas fotos e relatos com autorização das clientes. Os cards abaixo são placeholders.
+        </p>
+      </div>
 
-    document.querySelectorAll('.slider-side').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        const target=document.getElementById(btn.dataset.target);
-        if(target) moveCarousel(target,Number(btn.dataset.dir));
-      });
-    });
+      <div class="carousel-stage">
 
-    document.querySelectorAll('.material-carousel').forEach(c=>{
-      const stage=c.parentElement;
-      const arrows=stage.querySelectorAll('.material-arrow');
-      const update=()=>{
-        const items=carouselItems(c),index=carouselIndex(c);
-        if(arrows[0]) arrows[0].disabled=index<=0;
-        if(arrows[1]) arrows[1].disabled=index>=items.length-1;
-      };
-      arrows.forEach(btn=>btn.addEventListener('click',()=>{
-        moveCarousel(c,Number(btn.dataset.materialDir));
-        setTimeout(update,300);
-      }));
-      c.addEventListener('scroll',update,{passive:true});
-      window.addEventListener('resize',update);
-      requestAnimationFrame(update);
-    });
+        <button
+          class="slider-side slider-side-left"
+          data-target="results"
+          data-dir="-1"
+          aria-label="Ver resultado anterior"
+        >‹</button>
 
-    document.querySelectorAll('.carousel').forEach(carousel=>{
-      // O toque vertical deve continuar rolando a página mesmo quando começa
-      // sobre fotos ou vídeos. O navegador cuida do swipe horizontal nativo.
-      carousel.style.touchAction='auto';
-      carousel.addEventListener('scroll',()=>updateCarouselButtons(carousel),{passive:true});
-      carousel.addEventListener('keydown',e=>{
-        if(e.key==='ArrowLeft'||e.key==='ArrowRight'){
-          e.preventDefault();
-          moveCarousel(carousel,e.key==='ArrowRight'?1:-1);
-        }
-      });
-      requestAnimationFrame(()=>updateCarouselButtons(carousel));
-    });
-  </script>
+        <div class="carousel" id="results" tabindex="0">
+
+          <article class="result">
+            <div class="beforeafter">
+              <div class="before">
+                <img src="antes1.jpg" alt="Antes - cliente 1">
+              </div>
+              <div class="after">
+                <img src="depois1.jpg" alt="Depois - cliente 1">
+              </div>
+            </div>
+            <strong>Cleide Moura</strong><br>
+            <small>2 meses de exercícios.</small>
+          </article>
+
+          <article class="result">
+            <div class="beforeafter">
+              <div class="before">
+                <img src="antes2.jpg" alt="Antes - cliente 2">
+              </div>
+              <div class="after">
+                <img src="depois2.jpg" alt="Depois - cliente 2">
+              </div>
+            </div>
+            <strong>Nayara Castilho</strong><br>
+            <small>2 meses de exercicíos.</small>
+          </article>
+
+          <article class="result">
+            <div class="beforeafter">
+              <div class="before">
+                <img src="antes3.jpg" alt="Antes - cliente 3">
+              </div>
+              <div class="after">
+                <img src="depois3.jpg" alt="Depois - cliente 3">
+              </div>
+            </div>
+            <strong>Mirella Castanheira</strong><br>
+            <small>1 mês de exercicíos.</small>
+          </article>
+
+          <article class="result">
+            <div class="beforeafter">
+              <div class="before">
+                <img src="antes4.jpg" alt="Antes - cliente 4">
+              </div>
+              <div class="after">
+                <img src="depois4.jpg" alt="Depois - cliente 4">
+              </div>
+            </div>
+            <strong>Cliente 4</strong><br>
+            <small>Resultado de exercícios.</small>
+          </article>
+
+          <article class="result">
+            <div class="beforeafter">
+              <div class="before">
+                <img src="antes5.jpg" alt="Antes - cliente 5">
+              </div>
+              <div class="after">
+                <img src="depois5.jpg" alt="Depois - cliente 5">
+              </div>
+            </div>
+            <strong>Cliente 5</strong><br>
+            <small>Resultado de exercícios.</small>
+          </article>
+
+          <article class="result">
+            <div class="beforeafter">
+              <div class="before">
+                <img src="antes6.jpg" alt="Antes - cliente 6">
+              </div>
+              <div class="after">
+                <img src="depois6.jpg" alt="Depois - cliente 6">
+              </div>
+            </div>
+            <strong>Cliente 6</strong><br>
+            <small>Resultado de exercícios.</small>
+          </article>
+
+          <article class="result">
+            <div class="beforeafter">
+              <div class="before">
+                <img src="antes7.jpg" alt="Antes - cliente 7">
+              </div>
+              <div class="after">
+                <img src="depois7.jpg" alt="Depois - cliente 7">
+              </div>
+            </div>
+            <strong>Cliente 7</strong><br>
+            <small>Resultado de exercícios.</small>
+          </article>
+
+          <article class="result">
+            <div class="beforeafter">
+              <div class="before">
+                <img src="antes8.jpg" alt="Antes - cliente 8">
+              </div>
+              <div class="after">
+                <img src="depois8.jpg" alt="Depois - cliente 8">
+              </div>
+            </div>
+            <strong>Cliente 8</strong><br>
+            <small>Resultado de exercícios.</small>
+          </article>
+
+          <article class="result">
+            <div class="beforeafter">
+              <div class="before">
+                <img src="antes9.jpg" alt="Antes - cliente 9">
+              </div>
+              <div class="after">
+                <img src="depois9.jpg" alt="Depois - cliente 9">
+              </div>
+            </div>
+            <strong>Cliente 9</strong><br>
+            <small>Resultado de exercícios.</small>
+          </article>
+
+          <article class="result">
+            <div class="beforeafter">
+              <div class="before">
+                <img src="antes10.jpg" alt="Antes - cliente 10">
+              </div>
+              <div class="after">
+                <img src="depois10.jpg" alt="Depois - cliente 10">
+              </div>
+            </div>
+            <strong>Cliente 10</strong><br>
+            <small>Resultado de exercícios.</small>
+          </article>
+
+        </div>
+
+        <button
+          class="slider-side slider-side-right"
+          data-target="results"
+          data-dir="1"
+          aria-label="Ver próximo resultado"
+        >›</button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OFERTA ===== -->
+  <section class="offer" id="oferta">
+    <div class="container">
+
+      <div class="section-head">
+        <div class="kicker">Oferta especial</div>
+        <h2>Comece o Projeto Verão em Casa.</h2>
+        <p>Um programa digital simples para você acessar de onde estiver.</p>
+      </div>
+
+      <div class="offer-box">
+
+        <div class="offer-kicker-row">
+          <div class="offer-kicker">
+            Aproveite enquanto a oferta está disponível
+          </div>
+
+          <div
+            class="offer-timer"
+            id="offerTimer"
+            aria-label="Tempo restante da oferta"
+          >05:00</div>
+        </div>
+
+        <div class="price-wrap">
+          <span class="price-old">DE R$ 39,90</span>
+          <span class="price-arrow">→</span>
+          <div class="price">
+            R$ 19,90
+            <small>pagamento único*</small>
+          </div>
+        </div>
+
+        <div class="discount-badge">
+          🔥 PROMOÇÃO • 50% DE DESCONTO • PAGAMENTO ÚNICO 🔥
+        </div>
+
+        <p class="offer-value">
+          Você recebe o acesso ao conteúdo digital descrito nesta página, sem mensalidade.
+        </p>
+
+        <div class="offer-list">
+          <div>✓ 6 dias de treino</div>
+          <div>✓ 6 pastas no Google Drive</div>
+          <div>✓ Videoaulas</div>
+          <div>✓ Exercícios ilustrados</div>
+          <div>✓ Material para consulta</div>
+          <div>✓ Acesso digital</div>
+        </div>
+
+        <a
+          class="btn btn-primary"
+          style="width:100%;padding:17px"
+          href="https://pay.cakto.com.br/heygsp4_1157628"
+        >
+          🔥 QUERO APROVEITAR A OFERTA →
+        </a>
+
+        <div class="guarantee">
+          🔒 Pagamento processado de forma segura • *Condições conforme seu checkout.
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <div class="container">
+
+      <div class="section-head">
+        <div class="kicker">FAQ</div>
+        <h2>Perguntas frequentes</h2>
+      </div>
+
+      <div class="faq">
+
+        <details>
+          <summary>Como recebo o Projeto Verão em Casa?</summary>
+          <p>
+            Após a confirmação do pagamento, o acesso deve ser entregue pelo seu sistema de checkout, conforme a configuração da sua oferta.
+          </p>
+        </details>
+
+        <details>
+          <summary>Preciso ir à academia?</summary>
+          <p>
+            Não. A proposta do produto é oferecer treinos para serem realizados em casa, seguindo as orientações disponíveis nas videoaulas e materiais.
+          </p>
+        </details>
+
+        <details>
+          <summary>Quanto tempo duram os vídeos?</summary>
+          <p>
+            Os vídeos dos seis dias têm durações diferentes, aproximadamente entre 10 e 59 minutos.
+          </p>
+        </details>
+
+        <details>
+          <summary>O que existe dentro de cada pasta?</summary>
+          <p>
+            Cada uma das seis pastas reúne os vídeos do respectivo dia e materiais de apoio com ilustrações, nomes dos exercícios, textos e dicas.
+          </p>
+        </details>
+
+        <details>
+          <summary>Posso imprimir os exercícios?</summary>
+          <p>
+            Sim. O material ilustrativo foi pensado também para ser consultado e, se você quiser, impresso.
+          </p>
+        </details>
+
+        <details>
+          <summary>Sou iniciante. Posso fazer?</summary>
+          <p>
+            O nível de condicionamento varia de pessoa para pessoa. Comece respeitando seus limites, adapte os movimentos quando necessário e interrompa o exercício se sentir dor ou mal-estar. Se tiver alguma condição de saúde ou dúvida sobre sua capacidade de se exercitar, procure orientação profissional.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL ===== -->
+  <section class="final">
+    <div class="container">
+
+      <div class="kicker">Seu próximo passo</div>
+
+      <h2>Seu espaço também pode ser o seu lugar de treino.</h2>
+
+      <p>
+        Tenha os 6 dias organizados em um único produto e comece a criar uma rotina de movimento em casa.
+      </p>
+
+      <a class="btn btn-primary" href="#oferta">
+        Quero o Projeto Verão em Casa →
+      </a>
+
+      <div class="disclaimer">
+        Este produto é educacional e não substitui avaliação ou acompanhamento de profissionais de saúde e educação física. Resultados individuais podem variar.
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Projeto Verão em Casa • Todos os direitos reservados.
+  </div>
+</footer>
 
 <script>
+  function carouselItems(c){
+    return Array.from(c.children).filter(el=>el.offsetWidth>0);
+  }
+
+  function carouselIndex(c){
+    const items=carouselItems(c);
+    if(!items.length) return 0;
+
+    let best=0,dist=Infinity;
+
+    items.forEach((item,i)=>{
+      const d=Math.abs(c.scrollLeft-item.offsetLeft);
+
+      if(d<dist){
+        dist=d;
+        best=i;
+      }
+    });
+
+    return best;
+  }
+
+  function updateCarouselButtons(c){
+    const items=carouselItems(c);
+    const index=carouselIndex(c);
+
+    if(!items.length)return;
+
+    const left=c.parentElement?.querySelector('.slider-side-left');
+    const right=c.parentElement?.querySelector('.slider-side-right');
+
+    if(left) left.disabled=index<=0;
+    if(right) right.disabled=index>=items.length-1;
+  }
+
+  function moveCarousel(c,dir){
+    const items=carouselItems(c);
+
+    if(!items.length)return;
+
+    const index=carouselIndex(c);
+    const next=Math.max(0,Math.min(items.length-1,index+dir));
+
+    if(next===index){
+      updateCarouselButtons(c);
+      return;
+    }
+
+    c.scrollTo({
+      left:items[next].offsetLeft,
+      behavior:'smooth'
+    });
+
+    setTimeout(()=>updateCarouselButtons(c),300);
+  }
+
+  // Depoimentos em vídeo
+  const reviewVideos=Array.from(
+    document.querySelectorAll('#videoReviews video')
+  );
+
+  function resetReviewVideo(video){
+    try{
+      video.pause();
+      video.currentTime=0;
+      video.load();
+    }catch(e){}
+  }
+
+  reviewVideos.forEach(video=>{
+    video.addEventListener('play',()=>{
+      reviewVideos.forEach(other=>{
+        if(other!==video) resetReviewVideo(other);
+      });
+    });
+  });
+
+  const videoReviewsCarousel=document.getElementById('videoReviews');
+
+  if(videoReviewsCarousel){
+    let reviewScrollTimer;
+
+    videoReviewsCarousel.addEventListener(
+      'scroll',
+      ()=>{
+        clearTimeout(reviewScrollTimer);
+
+        reviewScrollTimer=setTimeout(()=>{
+          reviewVideos.forEach(resetReviewVideo);
+        },120);
+      },
+      {passive:true}
+    );
+  }
+
+  document.querySelectorAll('.slider-side').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const target=document.getElementById(btn.dataset.target);
+
+      if(target){
+        moveCarousel(target,Number(btn.dataset.dir));
+      }
+    });
+  });
+
+  document.querySelectorAll('.material-carousel').forEach(c=>{
+    const stage=c.parentElement;
+    const arrows=stage.querySelectorAll('.material-arrow');
+
+    const update=()=>{
+      const items=carouselItems(c);
+      const index=carouselIndex(c);
+
+      if(arrows[0]) arrows[0].disabled=index<=0;
+      if(arrows[1]) arrows[1].disabled=index>=items.length-1;
+    };
+
+    arrows.forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        moveCarousel(c,Number(btn.dataset.materialDir));
+        setTimeout(update,300);
+      });
+    });
+
+    c.addEventListener('scroll',update,{passive:true});
+
+    window.addEventListener('resize',update);
+
+    requestAnimationFrame(update);
+  });
+
+  document.querySelectorAll('.carousel').forEach(carousel=>{
+
+    carousel.style.touchAction='auto';
+
+    carousel.addEventListener(
+      'scroll',
+      ()=>updateCarouselButtons(carousel),
+      {passive:true}
+    );
+
+    carousel.addEventListener('keydown',e=>{
+      if(e.key==='ArrowLeft'||e.key==='ArrowRight'){
+        e.preventDefault();
+
+        moveCarousel(
+          carousel,
+          e.key==='ArrowRight'?1:-1
+        );
+      }
+    });
+
+    requestAnimationFrame(
+      ()=>updateCarouselButtons(carousel)
+    );
+  });
+</script>
+
+<!-- ===== SCRIPT DO QUIZ ===== -->
+<script>
 (function(){
+
   const overlay=document.getElementById('quizOverlay');
+
   if(!overlay)return;
+
   document.body.classList.add('quiz-open');
 
-  const screens=Array.from(overlay.querySelectorAll('.quiz-screen'));
+  const screens=Array.from(
+    overlay.querySelectorAll('.quiz-screen')
+  );
+
   let current=0;
 
   function showScreen(index){
-    screens.forEach((screen,i)=>screen.classList.toggle('active',i===index));
+    screens.forEach((screen,i)=>{
+      screen.classList.toggle('active',i===index);
+    });
+
     current=index;
     overlay.scrollTop=0;
   }
+
   function nextScreen(){
-    if(current<screens.length-1)showScreen(current+1);
+    if(current<screens.length-1){
+      showScreen(current+1);
+    }
   }
 
-  overlay.querySelectorAll('.quiz-screen:not([data-screen="6"]) .quiz-option').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      btn.classList.add('selected');
-      setTimeout(nextScreen,150);
-    });
-  });
+  overlay
+    .querySelectorAll('.quiz-screen:not([data-screen="6"]) .quiz-option')
+    .forEach(btn=>{
 
-  overlay.querySelectorAll('.quiz-image-choice').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      btn.classList.add('selected');
-      const img=btn.querySelector('.quiz-image');
-      if(img)img.style.borderColor='#ef6f61';
-      setTimeout(nextScreen,150);
-    });
-  });
+      btn.addEventListener('click',()=>{
 
-  overlay.querySelector('.quiz-continue').addEventListener('click',nextScreen);
+        btn.classList.add('selected');
 
-  overlay.querySelectorAll('[data-finish="true"]').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      btn.classList.add('selected');
-      setTimeout(()=>{
-        overlay.classList.add('quiz-hidden');
-        document.body.classList.remove('quiz-open');
-        window.scrollTo(0,0);
-        setTimeout(()=>overlay.remove(),400);
-      },180);
+        setTimeout(
+          nextScreen,
+          150
+        );
+
+      });
+
     });
-  });
+
+  overlay
+    .querySelectorAll('.quiz-image-choice')
+    .forEach(btn=>{
+
+      btn.addEventListener('click',()=>{
+
+        btn.classList.add('selected');
+
+        const img=btn.querySelector('.quiz-image');
+
+        if(img){
+          img.style.borderColor='#ef6f61';
+        }
+
+        setTimeout(
+          nextScreen,
+          150
+        );
+
+      });
+
+    });
+
+  overlay
+    .querySelector('.quiz-continue')
+    .addEventListener(
+      'click',
+      nextScreen
+    );
+
+  overlay
+    .querySelectorAll('[data-finish="true"]')
+    .forEach(btn=>{
+
+      btn.addEventListener('click',()=>{
+
+        btn.classList.add('selected');
+
+        setTimeout(()=>{
+
+          overlay.classList.add('quiz-hidden');
+
+          document.body.classList.remove('quiz-open');
+
+          window.scrollTo(0,0);
+
+          setTimeout(
+            ()=>overlay.remove(),
+            400
+          );
+
+        },180);
+
+      });
+
+    });
+
 })();
 </script>
 
-
+<!-- ===== TIMER DA OFERTA ===== -->
 <script>
 (function(){
+
   const timer=document.getElementById('offerTimer');
-  if(!timer) return;
+
+  if(!timer)return;
+
   let remaining=300;
+
   function render(){
-    const m=String(Math.floor(remaining/60)).padStart(2,'0');
-    const sec=String(remaining%60).padStart(2,'0');
+
+    const m=String(
+      Math.floor(remaining/60)
+    ).padStart(2,'0');
+
+    const sec=String(
+      remaining%60
+    ).padStart(2,'0');
+
     timer.textContent=m+':'+sec;
   }
+
   render();
+
   setInterval(function(){
+
     remaining--;
-    if(remaining<0) remaining=300;
+
+    if(remaining<0){
+      remaining=300;
+    }
+
     render();
+
   },1000);
+
 })();
 </script>
+
 </body>
 </html>
+```
